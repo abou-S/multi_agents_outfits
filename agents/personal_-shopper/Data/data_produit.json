@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "titre": "Pantalon taille haute noir",
+    "sexe": "femme",
+    "categorie": "pantalon",
+    "style": ["chic", "soirée"],
+    "prix": 29.99,
+    "marque": "Stradivarius",
+    "url": "https://www.asos.com/fake/pantalon-noir",
+    "image": "https://images.asos-media.com/products/stradivarius-pantalon-barrel-noir/209298771-4?$n_320w$&wid=317&fit=constrain"
+  },
+  {
+    "id": 2,
+    "titre": "Sandales à talon bloc nude",
+    "sexe": "femme",
+    "categorie": "chaussures",
+    "style": ["soirée", "chic"],
+    "prix": 37.99,
+    "marque": "ASOS DESIGN",
+    "url": "https://www.asos.com/fake/sandales-nude",
+    "image": "https://images.asos-media.com/products/asos-design-honeycomb-mules-larges-en-suedine-a-talon-mi-haut-taupe/208321038-4?$n_320w$&wid=317&fit=constrain"
+  }
+]
