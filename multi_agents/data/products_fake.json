@@ -1,0 +1,47 @@
+[
+    {
+      "id": "p1",
+      "name": "Costume bleu marine slim",
+      "price": 99.99,
+      "currency": "EUR",
+      "product_url": "https://fake-store.com/products/costume-bleu-slim",
+      "image_url": "https://fake-store.com/images/costume-bleu-slim.jpg",
+      "source": "FakeStore",
+      "category": "suit",
+      "gender": "homme"
+    },
+    {
+      "id": "p2",
+      "name": "Chemise blanche coupe classique",
+      "price": 29.99,
+      "currency": "EUR",
+      "product_url": "https://fake-store.com/products/chemise-blanche-classique",
+      "image_url": "https://fake-store.com/images/chemise-blanche-classique.jpg",
+      "source": "FakeStore",
+      "category": "shirt",
+      "gender": "homme"
+    },
+    {
+      "id": "p3",
+      "name": "Cravate noire unie",
+      "price": 19.99,
+      "currency": "EUR",
+      "product_url": "https://fake-store.com/products/cravate-noire-unie",
+      "image_url": "https://fake-store.com/images/cravate-noire-unie.jpg",
+      "source": "FakeStore",
+      "category": "tie",
+      "gender": "homme"
+    },
+    {
+      "id": "p4",
+      "name": "Chaussures derby noires",
+      "price": 59.99,
+      "currency": "EUR",
+      "product_url": "https://fake-store.com/products/chaussures-derby-noires",
+      "image_url": "https://fake-store.com/images/chaussures-derby-noires.jpg",
+      "source": "FakeStore",
+      "category": "shoes",
+      "gender": "homme"
+    }
+  ]
+  
