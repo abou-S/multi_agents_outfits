@@ -1,7 +1,11 @@
+
 import whisper
 import json
 import os
 from groq import Groq
+import sounddevice as sd
+from scipy.io.wavfile import write
+import tempfile
 
 # 1) Ici on utilise juste whisper pour le moment 
 model = whisper.load_model("small")
@@ -57,7 +61,6 @@ Texte utilisateur :
         "anniv": "anniversaire",
         "birthday": "anniversaire",
         "batéme" : "baptême",
-        
     }
 
     if ev in corrections_evenement:
@@ -74,7 +77,7 @@ Texte utilisateur :
     ]
 
     parsed["preferences"] = [
-        p for p in prefs if p.lower() not in prefs_a_supprimer
+        p for p in prefs if isinstance(p, str) and p.lower() not in prefs_a_supprimer
     ]
 
     if not parsed["preferences"]:
@@ -89,6 +92,34 @@ def agent1(audio_path: str) -> dict:
     return infos
 
 
+def enregistrer_depuis_micro(duree_sec: int = 8, samplerate: int = 16000) -> str:
+    """
+    Enregistre la voix depuis le micro pendant `duree_sec` secondes
+    et retourne le chemin vers un fichier WAV temporaire.
+    """
+    print(f"Parle pendant {duree_sec} secondes après le bip...")
+    input("Appuie sur Entrée pour commencer l'enregistrement.")
+    print("🎙 Enregistrement...")
+
+    audio = sd.rec(
+        int(duree_sec * samplerate),
+        samplerate=samplerate,
+        channels=1,
+        dtype="int16",
+    )
+    sd.wait()
+    print("✅ Terminé.")
+
+    tmp_fd, tmp_path = tempfile.mkstemp(suffix=".wav")
+    os.close(tmp_fd)  # on ferme le descripteur, on ne garde que le chemin
+
+    write(tmp_path, samplerate, audio)
+    return tmp_path
+
+
 if __name__ == "__main__":
-    data = agent1("demo.wav")
+    wav_path = enregistrer_depuis_micro(duree_sec=8)
+    data = agent1(wav_path)
     print(json.dumps(data, indent=2, ensure_ascii=False))
+
+    
