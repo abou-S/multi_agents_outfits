@@ -1,0 +1,414 @@
+{
+  "event": {
+    "event_type": "rendez-vous",
+    "time_of_day": "soirée",
+    "formality_level": "décontracté",
+    "style": "streetwear, décontracté",
+    "budget": 200.0,
+    "gender": "homme",
+    "age": 23
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Streetwear décontracté",
+        "description": "Jean décontracté avec un t-shirt graphique et des baskets pour un look jeune et décontracté.",
+        "formality_level": "décontracté",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "jean décontracté",
+            "category": "pantalon",
+            "max_price": 60.0
+          },
+          {
+            "name": "t-shirt graphique",
+            "category": "t-shirt",
+            "max_price": 30.0
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 60.0
+          }
+        ]
+      },
+      {
+        "style_name": "Décontracté chic",
+        "description": "Pantalon chino avec un pull en coton et des baskets pour un look décontracté mais élégant.",
+        "formality_level": "décontracté",
+        "total_budget": 180.0,
+        "items": [
+          {
+            "name": "pantalon chino",
+            "category": "pantalon",
+            "max_price": 80.0
+          },
+          {
+            "name": "pull en coton",
+            "category": "pull",
+            "max_price": 50.0
+          },
+          {
+            "name": "baskets brunes",
+            "category": "chaussures",
+            "max_price": 50.0
+          }
+        ]
+      },
+      {
+        "style_name": "Streetwear urbain",
+        "description": "Jean slim avec un hoodie et des baskets pour un look streetwear urbain.",
+        "formality_level": "décontracté",
+        "total_budget": 200.0,
+        "items": [
+          {
+            "name": "jean slim",
+            "category": "pantalon",
+            "max_price": 70.0
+          },
+          {
+            "name": "hoodie",
+            "category": "hoodie",
+            "max_price": 60.0
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 70.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Streetwear décontracté",
+        "description": "Jean décontracté avec un t-shirt graphique et des baskets pour un look jeune et décontracté.",
+        "formality_level": "décontracté",
+        "total_budget": 63.97,
+        "items": [
+          {
+            "name": "jean décontracté",
+            "category": "pantalon",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "SOUTHPOLE  - Jean droit - raw indigo",
+              "brand": "Southpole",
+              "price": 26.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/southpole-jean-droit-raw-indigo-2so22g002-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/e9c6c8cdc1164966833e16ee4f989faa/7608e5681392449b9e597b1573d94c33.jpg?imwidth=200",
+              "sku": "2SO22G002-Q11",
+              "color": "raw indigo/noir"
+            }
+          },
+          {
+            "name": "t-shirt graphique",
+            "category": "t-shirt",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "NO GUTS NO GLORY  - T-shirt imprimé - white",
+              "brand": "Mister Tee",
+              "price": 11.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/mister-tee-t-shirt-imprime-white-m0m22o0z6-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/6d1465cc07ba437db69ae3711c4489b3/65b677c093874d75b0e9f9bd876534ee.jpg?imwidth=200&filter=packshot",
+              "sku": "M0M22O0Z6-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "Baskets basses - black",
+              "brand": "Koroshi",
+              "price": 24.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/koroshi-baskets-basses-black-kol12o00p-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/576d02673b4b4a1f9884de6bfa9e85e1/bfe6629aaa554cf89ffc61ba9c344176.jpg?imwidth=200&filter=packshot",
+              "sku": "KOL12O00P-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Décontracté chic",
+        "description": "Pantalon chino avec un pull en coton et des baskets pour un look décontracté mais élégant.",
+        "formality_level": "décontracté",
+        "total_budget": 76.94,
+        "items": [
+          {
+            "name": "pantalon chino",
+            "category": "pantalon",
+            "max_price": 80.0,
+            "chosen_product": {
+              "name": "KANE DAVE AKM - Chino - castlerock",
+              "brand": "Jack & Jones",
+              "price": 29.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/jack-and-jones-kane-dave-akm-chino-castlerock-ja222e16z-c13.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/46c3d8b9458c4d68a570fe225a0faec3/5480aa3dae9c4aaeb2ec34d9409f7eff.png?imwidth=200",
+              "sku": "JA222E16Z-C13",
+              "color": "castlerock/gris"
+            }
+          },
+          {
+            "name": "pull en coton",
+            "category": "pull",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "BHMARLON - Sweatshirt - stone mix",
+              "brand": "Blend",
+              "price": 19.95,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/blend-pullover-stone-mix-bl522q09t-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/704365536a354ab6b229f56d02568d91/99e8ef426f5d4fd9ae67d27de226ed6f.jpg?imwidth=200",
+              "sku": "BL522Q09T-C11",
+              "color": "stone mix/gris"
+            }
+          },
+          {
+            "name": "baskets brunes",
+            "category": "chaussures",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "SMART - Baskets basses - tan brown",
+              "brand": "Next",
+              "price": 27.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-smart-baskets-basses-tan-brown-nx312o05h-o11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/08f9ecfca80b4df69cd22bb982b7db80/55e5546a3d3947c09ab96c9604df6133.jpg?imwidth=200",
+              "sku": "NX312O05H-O11",
+              "color": "tan brown/marron"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Streetwear urbain",
+        "description": "Jean slim avec un hoodie et des baskets pour un look streetwear urbain.",
+        "formality_level": "décontracté",
+        "total_budget": 74.97,
+        "items": [
+          {
+            "name": "jean slim",
+            "category": "pantalon",
+            "max_price": 70.0,
+            "chosen_product": {
+              "name": "Jean slim - new dark blue washed",
+              "brand": "Urban Classics",
+              "price": 23.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/urban-classics-jean-slim-new-dark-blue-washed-ur622g01b-k11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f89a6b5a729241be9a8c569039107dce/2743e67bb7a24420adf0c72cb32fb57c.jpg?imwidth=200",
+              "sku": "UR622G01B-K11",
+              "color": "new dark blue washed/bleu marine"
+            }
+          },
+          {
+            "name": "hoodie",
+            "category": "hoodie",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "Sweat à capuche - driftwood",
+              "brand": "Dropsize",
+              "price": 25.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/dropsize-sweatshirt-driftwood-dbb22s078-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/2bc9d9ff2f774cd7b2a5608ccc96fc66/79959435410b4f4eb091d0d8b54be46a.jpg?imwidth=200",
+              "sku": "DBB22S078-C11",
+              "color": "driftwood/gris clair"
+            }
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 70.0,
+            "chosen_product": {
+              "name": "Baskets basses - black",
+              "brand": "Koroshi",
+              "price": 24.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/koroshi-baskets-basses-black-kol12o00p-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/576d02673b4b4a1f9884de6bfa9e85e1/bfe6629aaa554cf89ffc61ba9c344176.jpg?imwidth=200&filter=packshot",
+              "sku": "KOL12O00P-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Streetwear décontracté",
+      "description": "Jean décontracté avec un t-shirt graphique et des baskets pour un look jeune et décontracté.",
+      "formality_level": "décontracté",
+      "total_budget": 63.97,
+      "items": [
+        {
+          "name": "jean décontracté",
+          "category": "pantalon",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "SOUTHPOLE  - Jean droit - raw indigo",
+            "brand": "Southpole",
+            "price": 26.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/southpole-jean-droit-raw-indigo-2so22g002-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/e9c6c8cdc1164966833e16ee4f989faa/7608e5681392449b9e597b1573d94c33.jpg?imwidth=200",
+            "sku": "2SO22G002-Q11",
+            "color": "raw indigo/noir"
+          }
+        },
+        {
+          "name": "t-shirt graphique",
+          "category": "t-shirt",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "NO GUTS NO GLORY  - T-shirt imprimé - white",
+            "brand": "Mister Tee",
+            "price": 11.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/mister-tee-t-shirt-imprime-white-m0m22o0z6-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/6d1465cc07ba437db69ae3711c4489b3/65b677c093874d75b0e9f9bd876534ee.jpg?imwidth=200&filter=packshot",
+            "sku": "M0M22O0Z6-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "baskets noires",
+          "category": "chaussures",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "Baskets basses - black",
+            "brand": "Koroshi",
+            "price": 24.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/koroshi-baskets-basses-black-kol12o00p-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/576d02673b4b4a1f9884de6bfa9e85e1/bfe6629aaa554cf89ffc61ba9c344176.jpg?imwidth=200&filter=packshot",
+            "sku": "KOL12O00P-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/bd537b09-283f-4618-8046-96a3293ef248.png",
+      "preview_prompt": "Keep the person from the first image as the base, and use the other images as clothing references only, ignoring the mannequins. Dress the person in a relaxed streetwear outfit, consisting of a raw indigo/blue jeans, a white graphic t-shirt, and black sneakers, for a casual evening rendez-vous. Ensure the overall look is youthful, casual, and minimalist, with a focus on comfort and streetwear style, while maintaining the person's original face, skin tone, and body morphology."
+    },
+    {
+      "style_name": "Décontracté chic",
+      "description": "Pantalon chino avec un pull en coton et des baskets pour un look décontracté mais élégant.",
+      "formality_level": "décontracté",
+      "total_budget": 76.94,
+      "items": [
+        {
+          "name": "pantalon chino",
+          "category": "pantalon",
+          "max_price": 80.0,
+          "chosen_product": {
+            "name": "KANE DAVE AKM - Chino - castlerock",
+            "brand": "Jack & Jones",
+            "price": 29.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/jack-and-jones-kane-dave-akm-chino-castlerock-ja222e16z-c13.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/46c3d8b9458c4d68a570fe225a0faec3/5480aa3dae9c4aaeb2ec34d9409f7eff.png?imwidth=200",
+            "sku": "JA222E16Z-C13",
+            "color": "castlerock/gris"
+          }
+        },
+        {
+          "name": "pull en coton",
+          "category": "pull",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "BHMARLON - Sweatshirt - stone mix",
+            "brand": "Blend",
+            "price": 19.95,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/blend-pullover-stone-mix-bl522q09t-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/704365536a354ab6b229f56d02568d91/99e8ef426f5d4fd9ae67d27de226ed6f.jpg?imwidth=200",
+            "sku": "BL522Q09T-C11",
+            "color": "stone mix/gris"
+          }
+        },
+        {
+          "name": "baskets brunes",
+          "category": "chaussures",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "SMART - Baskets basses - tan brown",
+            "brand": "Next",
+            "price": 27.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-smart-baskets-basses-tan-brown-nx312o05h-o11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/08f9ecfca80b4df69cd22bb982b7db80/55e5546a3d3947c09ab96c9604df6133.jpg?imwidth=200",
+            "sku": "NX312O05H-O11",
+            "color": "tan brown/marron"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/6a6ac8e8-bd6b-4f3d-a96e-cea00f01f666.png",
+      "preview_prompt": "Keep the person from the first image as the base, using the other images as references for clothing only, without incorporating the mannequins' faces or bodies. Dress the person in a casual chic outfit, consisting of grey chino pants, a grey cotton sweater, and brown sneakers, inspired by the provided product images. Ensure the overall look is relaxed yet elegant, fitting for a casual evening rendez-vous, with a streetwear style and minimal accessories."
+    },
+    {
+      "style_name": "Streetwear urbain",
+      "description": "Jean slim avec un hoodie et des baskets pour un look streetwear urbain.",
+      "formality_level": "décontracté",
+      "total_budget": 74.97,
+      "items": [
+        {
+          "name": "jean slim",
+          "category": "pantalon",
+          "max_price": 70.0,
+          "chosen_product": {
+            "name": "Jean slim - new dark blue washed",
+            "brand": "Urban Classics",
+            "price": 23.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/urban-classics-jean-slim-new-dark-blue-washed-ur622g01b-k11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f89a6b5a729241be9a8c569039107dce/2743e67bb7a24420adf0c72cb32fb57c.jpg?imwidth=200",
+            "sku": "UR622G01B-K11",
+            "color": "new dark blue washed/bleu marine"
+          }
+        },
+        {
+          "name": "hoodie",
+          "category": "hoodie",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "Sweat à capuche - driftwood",
+            "brand": "Dropsize",
+            "price": 25.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/dropsize-sweatshirt-driftwood-dbb22s078-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/2bc9d9ff2f774cd7b2a5608ccc96fc66/79959435410b4f4eb091d0d8b54be46a.jpg?imwidth=200",
+            "sku": "DBB22S078-C11",
+            "color": "driftwood/gris clair"
+          }
+        },
+        {
+          "name": "baskets noires",
+          "category": "chaussures",
+          "max_price": 70.0,
+          "chosen_product": {
+            "name": "Baskets basses - black",
+            "brand": "Koroshi",
+            "price": 24.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/koroshi-baskets-basses-black-kol12o00p-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/576d02673b4b4a1f9884de6bfa9e85e1/bfe6629aaa554cf89ffc61ba9c344176.jpg?imwidth=200&filter=packshot",
+            "sku": "KOL12O00P-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/a95b1067-82c7-4d79-8ca5-7777fe0a3ea2.png",
+      "preview_prompt": "The first image is the base person. The other images are clothing references only. Keep the person from the first image as the base and dress them in a streetwear outfit inspired by the provided clothing references. The look should include a navy blue slim-fit jeans, a light grey hoodie, and black sneakers. The style should be casual and urban, fitting for a relaxed evening rendez-vous. Ensure the person's face, skin tone, and body morphology are preserved, and avoid mixing the faces or bodies of the mannequins from the clothing references. The overall look should be a clean and minimalist streetwear style with minimal accessories."
+    }
+  ]
+}

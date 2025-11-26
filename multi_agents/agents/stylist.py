@@ -47,6 +47,9 @@ class StylistAgent(Agent):
         try:
             parsed: StylistOutput = json.loads(raw_response)
         except json.JSONDecodeError:
+            print("[StylistAgent] JSON decode failed, raw LLM output:")
+            print(raw)
+
             parsed = {"outfits": []}  # fallback
 
         # Sécuriser le budget par tenue (au cas où le LLM dépasse)

@@ -37,10 +37,7 @@ class ModelslabImageClient:
         product_image_urls: List[str],
         prompt: str,
     ) -> Optional[str]:
-        """
-        Appelle l'API Modelslab image-to-image et renvoie l'URL de la première image générée.
-        """
-        init_images = [user_image_url] + product_image_urls
+        init_images = [user_image_url]  # on reste sur la version user-only
 
         payload: Dict[str, Any] = {
             "init_image": init_images,
@@ -52,50 +49,52 @@ class ModelslabImageClient:
 
         headers = {"Content-Type": "application/json"}
 
-        try:
-            resp = requests.post(self.api_url, headers=headers, json=payload, timeout=120)
-            resp.raise_for_status()
-        except requests.exceptions.HTTPError as http_err:
-            print(f"[ModelslabImageClient] HTTP error: {http_err} - {resp.text}")
+        # 🔁 On tente jusqu'à 2 fois max
+        for attempt in range(2):
+            try:
+                resp = requests.post(self.api_url, headers=headers, json=payload, timeout=120)
+                resp.raise_for_status()
+            except requests.exceptions.HTTPError as http_err:
+                print(f"[ModelslabImageClient] HTTP error: {http_err} - {resp.text}")
+                return None
+            except Exception as err:
+                print(f"[ModelslabImageClient] Other error: {err}")
+                return None
+
+            data = resp.json()
+            print("[ModelslabImageClient] Raw response:")
+            print(json.dumps(data, indent=2))
+
+            status = data.get("status")
+            if status == "success":
+                output = data.get("output") or []
+                proxy_links = data.get("proxy_links") or []
+
+                if isinstance(output, list) and output:
+                    first = output[0]
+                    if isinstance(first, str):
+                        return first
+
+                if isinstance(proxy_links, list) and proxy_links:
+                    first = proxy_links[0]
+                    if isinstance(first, str):
+                        return first
+
+                print("[ModelslabImageClient] No usable URL in response.")
+                return None
+
+            # ici status != "success"
+            message = data.get("message", "")
+            print(f"[ModelslabImageClient] Non-success status: {status} - {message}")
+
+            # si c'est une erreur serveur générique, on retente une fois
+            if "server error occurred" in message.lower() and attempt == 0:
+                print("[ModelslabImageClient] Retry once after server error...")
+                time.sleep(3)
+                continue
+
+            # sinon on abandonne direct
             return None
-        except Exception as err:
-            print(f"[ModelslabImageClient] Other error: {err}")
-            return None
 
-        data = resp.json()
-
-        # 👇 Debug léger pour voir ce que renvoie vraiment l'API (tu peux commenter après)
-        print("[ModelslabImageClient] Raw response:")
-        print(json.dumps(data, indent=2))
-
-        # On suit EXACTEMENT la structure que tu as montrée :
-        # {
-        #   "status": "success",
-        #   "output": ["https://...png"],
-        #   "proxy_links": ["https://...png"],
-        #   "meta": { ... }
-        # }
-
-        status = data.get("status")
-        if status != "success":
-            print(f"[ModelslabImageClient] Non-success status: {status}")
-            return None
-
-        output = data.get("output") or []
-        proxy_links = data.get("proxy_links") or []
-
-        # On privilégie output[0]
-        if isinstance(output, list) and output:
-            first = output[0]
-            if isinstance(first, str):
-                return first
-
-        # sinon, on tente proxy_links[0]
-        if isinstance(proxy_links, list) and proxy_links:
-            first = proxy_links[0]
-            if isinstance(first, str):
-                return first
-
-        print("[ModelslabImageClient] No usable URL in response.")
         return None
 

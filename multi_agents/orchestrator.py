@@ -1,48 +1,166 @@
-from typing import Dict, Any
+from typing import Optional, Dict, Any
 
 from multi_agents.agents.event_analyzer import EventAnalyzerAgent
 from multi_agents.agents.stylist import StylistAgent
 from multi_agents.agents.product_search import ProductSearchAgent
+from multi_agents.agents.outfit_visualizer import OutfitVisualizerAgent
+
 from multi_agents.core.llm_client import LLMClient
+from multi_agents.core.zalando_scraper import ZalandoScraper
+from multi_agents.core.image_client import ModelslabImageClient
+from multi_agents.core.models import (
+    EventUnderstanding,
+    StylistOutput,
+    ProductSearchOutput,
+    ResolvedOutfit,
+)
 
 
 class Orchestrator:
     """
-    Orchestrateur :
-    - EventAnalyzerAgent (LLM) : comprend l'événement
-    - StylistAgent (LLM)       : propose des idées de tenues
-    - ProductSearchAgent       : cherche des produits concrets (budget-aware)
+    Orchestrateur global du workflow :
+      1) EventAnalyzerAgent : comprend la demande de l'utilisateur
+      2) StylistAgent       : propose des idées de tenues + budget par article
+      3) ProductSearchAgent : va chercher des produits Zalando pour chaque article
+      4) OutfitVisualizer   : génère un mannequin portant la tenue
 
-    Le paramètre include_products permet de garder la compatibilité avec les
-    tests existants : si False, on ne fait pas la partie "search produits".
+    Méthode principale : run_pipeline(...)
     """
 
-    def __init__(self, llm_client: LLMClient | None = None) -> None:
-        self.llm_client = llm_client or LLMClient()
-        self.event_analyzer = EventAnalyzerAgent(llm_client=self.llm_client)
-        self.stylist = StylistAgent(llm_client=self.llm_client)
-        self.product_search = ProductSearchAgent(llm_client=self.llm_client)
+    def __init__(
+        self,
+        llm_client: Optional[LLMClient] = None,
+    ) -> None:
+        self.llm = llm_client or LLMClient()
 
-    def run(self, user_request: Dict[str, Any], include_products: bool = False) -> Dict[str, Any]:
+        # Agents
+        self.event_analyzer = EventAnalyzerAgent(llm_client=self.llm)
+        self.stylist = StylistAgent(llm_client=self.llm)
+
+        scraper = ZalandoScraper(
+            max_page=1,
+            max_results=3,
+        )
+        self.product_search = ProductSearchAgent(
+            llm_client=self.llm,
+            scraper=scraper,
+        )
+
+        image_client = ModelslabImageClient()
+        self.visualizer = OutfitVisualizerAgent(
+            llm_client=self.llm,
+            image_client=image_client,
+            max_outfits=3,
+        )
+
+    def run_pipeline(
+        self,
+        description: str,
+        ui_budget: Optional[float] = None,
+        ui_gender: str = "homme",
+        ui_age: Optional[int] = None,
+        user_image_url: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        """
+        Lance tout le workflow sur une seule demande utilisateur.
+
+        - description : texte libre décrivant l'événement, le style, etc.
+        - ui_budget   : budget éventuellement saisi dans l'UI (peut être None)
+        - ui_gender   : "homme" / "femme" (par défaut "homme")
+        - ui_age      : âge si disponible
+        - user_image_url : URL publique de la photo du user (si None, pas de mannequin généré)
+
+        Retourne un dict avec :
+        {
+          "event": EventUnderstanding,
+          "stylist_output": StylistOutput,
+          "product_search_output": ProductSearchOutput,
+          "final_outfits": list[ResolvedOutfit]
+        }
+        """
+
         # 1) Analyse de l'événement
-        step1 = self.event_analyzer.run({"user_request": user_request})
-        event_analysis = step1["event_analysis"]
+        event: EventUnderstanding = self._run_event_analyzer(
+            description=description,
+            ui_budget=ui_budget,
+            ui_gender=ui_gender,
+            ui_age=ui_age,
+        )
 
         # 2) Propositions de tenues
-        step2 = self.stylist.run({"event_analysis": event_analysis})
-        stylist_output = step2["stylist_output"]
+        stylist_output: StylistOutput = self._run_stylist(event)
 
-        result: Dict[str, Any] = {
-            "event_analysis": event_analysis,
+        # 3) Recherche de produits Zalando
+        product_search_output: ProductSearchOutput = self._run_product_search(
+            event,
+            stylist_output,
+        )
+
+        # 4) Visualisation (mannequin) - optionnel si pas d'image user
+        if user_image_url:
+            final_outfits = self._run_visualizer(
+                event,
+                product_search_output,
+                user_image_url,
+            )
+        else:
+            # si pas de photo utilisateur, on renvoie simplement les tenues avec produits
+            final_outfits = product_search_output["outfits"]
+
+        return {
+            "event": event,
             "stylist_output": stylist_output,
+            "product_search_output": product_search_output,
+            "final_outfits": final_outfits,
         }
 
-        # 3) (optionnel) Recherche produits + budget
-        if include_products:
-            step3 = self.product_search.run(
-                {"event_analysis": event_analysis, "stylist_output": stylist_output}
-            )
-            product_search_output = step3["product_search_output"]
-            result["product_search_output"] = product_search_output
+    # ---------------- Sous-étapes privées ----------------
 
-        return result
+    def _run_event_analyzer(
+        self,
+        description: str,
+        ui_budget: Optional[float],
+        ui_gender: str,
+        ui_age: Optional[int],
+    ) -> EventUnderstanding:
+        data = {
+            "raw_text": description,
+            "ui_budget": ui_budget,
+            "ui_gender": ui_gender,
+            "ui_age": ui_age,
+        }
+        result = self.event_analyzer.run(data)
+        # EventAnalyzerAgent renvoie déjà un EventUnderstanding
+        return result  # type: ignore
+
+    def _run_stylist(self, event: EventUnderstanding) -> StylistOutput:
+        result = self.stylist.run({"event": event})
+        # StylistAgent.run renvoie {"outfits": [...]}
+        return result  # type: ignore
+
+    def _run_product_search(
+        self,
+        event: EventUnderstanding,
+        stylist_output: StylistOutput,
+    ) -> ProductSearchOutput:
+        result = self.product_search.run(
+            {"event": event, "stylist_output": stylist_output}
+        )
+        # ProductSearchAgent.run renvoie {"product_search_output": {...}}
+        return result["product_search_output"]  # type: ignore
+
+    def _run_visualizer(
+        self,
+        event: EventUnderstanding,
+        product_search_output: ProductSearchOutput,
+        user_image_url: str,
+    ) -> list[ResolvedOutfit]:
+        result = self.visualizer.run(
+            {
+                "event": event,
+                "product_search_output": product_search_output,
+                "user_image_url": user_image_url,
+            }
+        )
+        # OutfitVisualizerAgent.run renvoie {"outfits": [...]}
+        return result["outfits"]  # type: ignore

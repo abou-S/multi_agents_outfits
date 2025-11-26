@@ -82,7 +82,9 @@ def main() -> None:
     }
 
     # 3) Image utilisateur (pour l’instant une URL de test)
-    user_image_url = "https://assets.modelslab.com/uploads/yVgAXzCyWO56bdGQEpBaP1fO6Wk8jYP2O0DoLJeg.jpg" 
+    #user_image_url = "https://github.com/abou-S/multi_agents_outfits/blob/abou/assets/user_photo_test.jpg" 
+    user_image_url = "https://raw.githubusercontent.com/abou-S/multi_agents_outfits/abou/assets/user_photo_test.jpg"
+
 
     # 4) Instancier l’agent
     agent = OutfitVisualizerAgent()

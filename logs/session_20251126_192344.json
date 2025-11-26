@@ -1,0 +1,519 @@
+{
+  "event": {
+    "event_type": "mariage",
+    "time_of_day": "soirée",
+    "formality_level": "chic",
+    "style": "minimaliste",
+    "budget": 150.0,
+    "gender": "homme",
+    "age": 30
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Minimaliste Chic",
+        "description": "Costume noir minimaliste avec chemise blanche et cravate noire pour un look chic et élégant.",
+        "formality_level": "chic",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "costume noir",
+            "category": "costume",
+            "max_price": 80.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0
+          },
+          {
+            "name": "cravate noire",
+            "category": "accessoire",
+            "max_price": 20.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 20.0
+          }
+        ]
+      },
+      {
+        "style_name": "Élégance Minimaliste",
+        "description": "Costume gris clair minimaliste avec chemise blanche et chaussures noires pour un look élégant et moderne.",
+        "formality_level": "chic",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "costume gris clair",
+            "category": "costume",
+            "max_price": 70.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 30.0
+          },
+          {
+            "name": "ceinture noire",
+            "category": "accessoire",
+            "max_price": 20.0
+          }
+        ]
+      },
+      {
+        "style_name": "Chic et Raffiné",
+        "description": "Costume bleu marine minimaliste avec chemise blanche et cravate grise pour un look chic et raffiné.",
+        "formality_level": "chic",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "costume bleu marine",
+            "category": "costume",
+            "max_price": 90.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 25.0
+          },
+          {
+            "name": "cravate grise",
+            "category": "accessoire",
+            "max_price": 15.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 20.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Minimaliste Chic",
+        "description": "Costume noir minimaliste avec chemise blanche et cravate noire pour un look chic et élégant.",
+        "formality_level": "chic",
+        "total_budget": 86.12,
+        "items": [
+          {
+            "name": "costume noir",
+            "category": "costume",
+            "max_price": 80.0,
+            "chosen_product": {
+              "name": "TAILORED FRONT - Pantalon de costume - black",
+              "brand": "Next",
+              "price": 34.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-pantalon-de-costume-black-nx322e0cm-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/981483a420333bb8adcc2ded2a74804b/2fb5a868a2a94a57b5d04d85af800bd4.jpg?imwidth=200",
+              "sku": "NX322E0CM-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "JJJOE SHIRT PLAIN MAO - Chemise - white",
+              "brand": "Jack & Jones",
+              "price": 20.09,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/jack-and-jones-premium-jjjoe-shirt-plain-mao-chemise-white-ja222d2mr-a12.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/7e90f4b185b34c788cc9b57babdecab0/3d85a0e5730348ffbfc0a1fa4dc6b4f3.jpg?imwidth=200",
+              "sku": "JA222D2MR-A12",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "cravate noire",
+            "category": "accessoire",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "JACSOLID - Cravate - black",
+              "brand": "Jack & Jones",
+              "price": 12.04,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/jack-and-jones-jacsolid-cravate-black-ja254s006-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/8f966e11ccdc4093b4db7a238087a42e/1819a2fe3ffa47efb4a2a9fd33e57a81.jpg?imwidth=200",
+              "sku": "JA254S006-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "Derbies - black",
+              "brand": "Pier One",
+              "price": 19.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0gd-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/83d6de4af0ab414aa587c69de049f27f/9c56417b7fcc49bb9bc6a708ddaf746a.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912C0GD-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Élégance Minimaliste",
+        "description": "Costume gris clair minimaliste avec chemise blanche et chaussures noires pour un look élégant et moderne.",
+        "formality_level": "chic",
+        "total_budget": 81.27,
+        "items": [
+          {
+            "name": "costume gris clair",
+            "category": "costume",
+            "max_price": 70.0,
+            "chosen_product": {
+              "name": "ATHLETIC FIT MOTIONFLEX STRETCH - SLIM FIT - Pantalon de costume - light grey",
+              "brand": "Next",
+              "price": 36.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-athletic-fit-motionflex-stretch-slim-fit-pantalon-classique-light-grey-nx322e16q-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/88e45567eabb41efa9be7788bf37c578/105f025619e948939bda08196f7a8250.jpg?imwidth=200",
+              "sku": "NX322E16Q-C11",
+              "color": "light grey/gris"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "KLASSISCHES - Chemise classique - white",
+              "brand": "Only & Sons",
+              "price": 20.29,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+              "sku": "OS322D086-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "Chaussures à lacets - black",
+              "brand": "Pier One",
+              "price": 16.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-chaussures-a-lacets-black-pi912m0gu-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f1b19701aa97467c9e9f08f1047bec41/ee6fc7e728bc47b5aad036c01be43ecc.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912M0GU-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "ceinture noire",
+            "category": "accessoire",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "SINGLE - Ceinture - black",
+              "brand": "Urban Classics",
+              "price": 7.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/urban-classics-single-ceinture-black-ur652d00a-q12.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/b6acd06316693ace8287805b21284e72/576900a7b9b34416b4a323c6033d0323.jpg?imwidth=200",
+              "sku": "UR652D00A-Q12",
+              "color": "black/noir"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Chic et Raffiné",
+        "description": "Costume bleu marine minimaliste avec chemise blanche et cravate grise pour un look chic et raffiné.",
+        "formality_level": "chic",
+        "total_budget": 92.31,
+        "items": [
+          {
+            "name": "costume bleu marine",
+            "category": "costume",
+            "max_price": 90.0,
+            "chosen_product": {
+              "name": "M&M FORMAL BLAZER - Veste de costume - dark blue",
+              "brand": "Pier One",
+              "price": 39.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-formal-blazer-dark-blue-pi922a03c-k11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/027b75e435484099a1f017e0f830b7bc/4a8a09cd5d4346b48954f766a530e2cf.jpg?imwidth=200",
+              "sku": "PI922A03C-K11",
+              "color": "dark blue/bleu marine"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 25.0,
+            "chosen_product": {
+              "name": "KLASSISCHES - Chemise classique - white",
+              "brand": "Only & Sons",
+              "price": 20.29,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+              "sku": "OS322D086-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "cravate grise",
+            "category": "accessoire",
+            "max_price": 15.0,
+            "chosen_product": {
+              "name": "JACSOLID - Cravate - black",
+              "brand": "Jack & Jones",
+              "price": 12.04,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/jack-and-jones-jacsolid-cravate-black-ja254s006-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/8f966e11ccdc4093b4db7a238087a42e/1819a2fe3ffa47efb4a2a9fd33e57a81.jpg?imwidth=200",
+              "sku": "JA254S006-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "Derbies - black",
+              "brand": "Pier One",
+              "price": 19.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0gd-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/83d6de4af0ab414aa587c69de049f27f/9c56417b7fcc49bb9bc6a708ddaf746a.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912C0GD-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Minimaliste Chic",
+      "description": "Costume noir minimaliste avec chemise blanche et cravate noire pour un look chic et élégant.",
+      "formality_level": "chic",
+      "total_budget": 86.12,
+      "items": [
+        {
+          "name": "costume noir",
+          "category": "costume",
+          "max_price": 80.0,
+          "chosen_product": {
+            "name": "TAILORED FRONT - Pantalon de costume - black",
+            "brand": "Next",
+            "price": 34.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-pantalon-de-costume-black-nx322e0cm-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/981483a420333bb8adcc2ded2a74804b/2fb5a868a2a94a57b5d04d85af800bd4.jpg?imwidth=200",
+            "sku": "NX322E0CM-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "JJJOE SHIRT PLAIN MAO - Chemise - white",
+            "brand": "Jack & Jones",
+            "price": 20.09,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/jack-and-jones-premium-jjjoe-shirt-plain-mao-chemise-white-ja222d2mr-a12.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/7e90f4b185b34c788cc9b57babdecab0/3d85a0e5730348ffbfc0a1fa4dc6b4f3.jpg?imwidth=200",
+            "sku": "JA222D2MR-A12",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "cravate noire",
+          "category": "accessoire",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "JACSOLID - Cravate - black",
+            "brand": "Jack & Jones",
+            "price": 12.04,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/jack-and-jones-jacsolid-cravate-black-ja254s006-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/8f966e11ccdc4093b4db7a238087a42e/1819a2fe3ffa47efb4a2a9fd33e57a81.jpg?imwidth=200",
+            "sku": "JA254S006-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chaussures noires",
+          "category": "chaussures",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "Derbies - black",
+            "brand": "Pier One",
+            "price": 19.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0gd-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/83d6de4af0ab414aa587c69de049f27f/9c56417b7fcc49bb9bc6a708ddaf746a.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912C0GD-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/52e0beed-9d32-47dc-b66f-14cf26855d1a.png",
+      "preview_prompt": "Use the first image as the base person, keeping their face, skin tone, and body morphology. The other images are references for clothing items only, ignore the mannequins. Dress the person in a minimalist chic outfit, consisting of a black suit, a white shirt, a black tie, and black shoes, inspired by the provided clothing references. Ensure the overall look is chic and elegant, suitable for a wedding evening event, with a focus on minimal accessories. The style should be minimalist, avoiding any excessive embellishments, and the formal level should be high-end, chic. Do not mix the faces or bodies of the mannequins from the clothing references with the base person."
+    },
+    {
+      "style_name": "Élégance Minimaliste",
+      "description": "Costume gris clair minimaliste avec chemise blanche et chaussures noires pour un look élégant et moderne.",
+      "formality_level": "chic",
+      "total_budget": 81.27,
+      "items": [
+        {
+          "name": "costume gris clair",
+          "category": "costume",
+          "max_price": 70.0,
+          "chosen_product": {
+            "name": "ATHLETIC FIT MOTIONFLEX STRETCH - SLIM FIT - Pantalon de costume - light grey",
+            "brand": "Next",
+            "price": 36.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-athletic-fit-motionflex-stretch-slim-fit-pantalon-classique-light-grey-nx322e16q-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/88e45567eabb41efa9be7788bf37c578/105f025619e948939bda08196f7a8250.jpg?imwidth=200",
+            "sku": "NX322E16Q-C11",
+            "color": "light grey/gris"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "KLASSISCHES - Chemise classique - white",
+            "brand": "Only & Sons",
+            "price": 20.29,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+            "sku": "OS322D086-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "chaussures noires",
+          "category": "chaussures",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "Chaussures à lacets - black",
+            "brand": "Pier One",
+            "price": 16.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-chaussures-a-lacets-black-pi912m0gu-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f1b19701aa97467c9e9f08f1047bec41/ee6fc7e728bc47b5aad036c01be43ecc.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912M0GU-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "ceinture noire",
+          "category": "accessoire",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "SINGLE - Ceinture - black",
+            "brand": "Urban Classics",
+            "price": 7.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/urban-classics-single-ceinture-black-ur652d00a-q12.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/b6acd06316693ace8287805b21284e72/576900a7b9b34416b4a323c6033d0323.jpg?imwidth=200",
+            "sku": "UR652D00A-Q12",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/54607188-8039-400c-b98f-9ef8544d3d0c.png",
+      "preview_prompt": "The first image is the base person, keep their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and use the clothes as inspiration. Dress the person in a light grey suit, a white shirt, black shoes, and a black belt for a chic and minimalist look, perfect for a wedding evening event. Ensure the overall style is elegant and modern, with a focus on minimal accessories, and maintain a high level of formality. The resulting image should feature the person from the first image wearing the described outfit, without any mixing of faces or bodies from the clothing reference images."
+    },
+    {
+      "style_name": "Chic et Raffiné",
+      "description": "Costume bleu marine minimaliste avec chemise blanche et cravate grise pour un look chic et raffiné.",
+      "formality_level": "chic",
+      "total_budget": 92.31,
+      "items": [
+        {
+          "name": "costume bleu marine",
+          "category": "costume",
+          "max_price": 90.0,
+          "chosen_product": {
+            "name": "M&M FORMAL BLAZER - Veste de costume - dark blue",
+            "brand": "Pier One",
+            "price": 39.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-formal-blazer-dark-blue-pi922a03c-k11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/027b75e435484099a1f017e0f830b7bc/4a8a09cd5d4346b48954f766a530e2cf.jpg?imwidth=200",
+            "sku": "PI922A03C-K11",
+            "color": "dark blue/bleu marine"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 25.0,
+          "chosen_product": {
+            "name": "KLASSISCHES - Chemise classique - white",
+            "brand": "Only & Sons",
+            "price": 20.29,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+            "sku": "OS322D086-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "cravate grise",
+          "category": "accessoire",
+          "max_price": 15.0,
+          "chosen_product": {
+            "name": "JACSOLID - Cravate - black",
+            "brand": "Jack & Jones",
+            "price": 12.04,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/jack-and-jones-jacsolid-cravate-black-ja254s006-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/8f966e11ccdc4093b4db7a238087a42e/1819a2fe3ffa47efb4a2a9fd33e57a81.jpg?imwidth=200",
+            "sku": "JA254S006-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chaussures noires",
+          "category": "chaussures",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "Derbies - black",
+            "brand": "Pier One",
+            "price": 19.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0gd-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/83d6de4af0ab414aa587c69de049f27f/9c56417b7fcc49bb9bc6a708ddaf746a.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912C0GD-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/42874eea-f62a-4bd4-94fb-7cf1f52e1415.png",
+      "preview_prompt": "Use the first image as the base person, keeping their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and focus on the garments. Dress the person in a chic, minimalist outfit inspired by the provided references: a navy blue suit, a white shirt, a grey tie, and black shoes. The overall look should be refined and elegant, suitable for a wedding evening event. Ensure the style is minimalist and the formality level is chic, avoiding any mix of the mannequins' faces or bodies with the base person."
+    }
+  ]
+}
