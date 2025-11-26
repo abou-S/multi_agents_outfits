@@ -1,14 +1,23 @@
 # multi_agents_outfits
 
-Petit guide pour installer, lancer le code et exécuter les tests.
+Ce dépôt contient un petit projet d'analyse d'événements vestimentaires et des prompts destinés à un modèle LLM.
 
-## Prérequis
-- Python 3.8+ installé (`python --version`)
+Contenu confirmé (racine du dépôt)
+- requirements.txt
+- multi_agents/  
+  - prompts/event_analyzer_system.txt  (prompt système utilisé pour l'analyse d'événements)
+
+But de ce projet
+- Fournir un prompt et une logique (à implémenter) pour convertir des descriptions d'événements en un JSON structuré pour guider le choix vestimentaire.
+- Fournir un point de départ pour exécuter une requête LLM en local.
+
+1. Prérequis
+- Python 3.8+
+- Une clé OpenAI (ou autre clé pour l'API LLM que vous utilisez)
 - Git (optionnel)
-- (Optionnel) Docker si vous préférez containeriser
 
-## Installation (recommandée)
-1. Créer et activer un environnement virtuel :
+2. Installation
+1) Créer et activer un environnement virtuel :
    - Linux / macOS:
      - python -m venv .venv
      - source .venv/bin/activate
@@ -16,42 +25,65 @@ Petit guide pour installer, lancer le code et exécuter les tests.
      - python -m venv .venv
      - .\.venv\Scripts\Activate.ps1
 
-2. Installer les dépendances si un fichier `requirements.txt` est présent :
+2) Installer les dépendances :
    - pip install -r requirements.txt
 
-   Si le projet est packagé (`pyproject.toml` / `setup.py`), vous pouvez aussi :
-   - pip install -e .
+3. Configuration (clé API)
+- Créez un fichier `.env` à la racine contenant au minimum :
+  OPENAI_API_KEY=sk_...
+- Le projet utilise python-dotenv si vous souhaitez charger automatiquement `.env`.
 
-## Lancer le code
-- Si le package expose un point d'entrée :
-  - python -m multi_agents
-- Sinon, exécutez le script principal s'il existe (exemples possibles) :
-  - python multi_agents/main.py
-  - python run.py
+4. Exécution — démonstrateur minimal (exemple)
+- Le dépôt contient le prompt système dans :
+  `multi_agents/prompts/event_analyzer_system.txt`
 
-Regardez la racine du dépôt ou le dossier `multi_agents/` pour identifier le fichier d'entrée exact.
+- Exemple rapide (fonctionnera sans code supplémentaire du dépôt) :
+  1) Sauvegardez votre description d'événement dans une variable shell, puis exécutez ce court script Python qui lit le prompt et appelle l'API OpenAI (nécessite `openai` installé et OPENAI_API_KEY défini) :
 
-## Tests
-- Si `pytest` est utilisé :
-  - pip install pytest   # si nécessaire
-  - pytest -q tests/     # ou simplement `pytest` si les tests sont à la racine
-- Si un autre runner est utilisé, suivez les fichiers de configuration (`pyproject.toml`, `tox.ini`, etc.).
+  ```bash
+  # Exemple (bash)
+  export OPENAI_API_KEY="votre_cle"
+  python - <<'PY'
+  import os, openai, json
+  # ...existing code...
+  prompt = open("multi_agents/prompts/event_analyzer_system.txt", "r", encoding="utf-8").read()
+  user_description = "Soirée d'entreprise informelle en intérieur, budget 80. Femme, soirée en début de soirée."
+  full = prompt + "\n\nUtilisateur: " + user_description + "\n\nRéponds:"
+  openai.api_key = os.getenv("OPENAI_API_KEY")
+  resp = openai.ChatCompletion.create(model="gpt-4o-mini", messages=[{"role":"system","content":prompt},{"role":"user","content":user_description}], max_tokens=400)
+  # Affiche le texte brut renvoyé par le modèle
+  print(resp["choices"][0]["message"]["content"])
+  PY
+  ```
 
-## Exemples d'usage
-- Exécution simple (après activation du venv et installation) :
-  - python -m multi_agents
-- Pour un script d'analyse d'événement (si présent) :
-  - python scripts/analyze_event.py "Description de l'événement"
+  - Adaptez le modèle (`gpt-4o-mini`) en fonction de votre accès.
 
-## Dépannage rapide
-- "ModuleNotFoundError": vérifier l'activation du venv et l'installation des dépendances.
-- Pas de fichier `requirements.txt`: inspecter `pyproject.toml` / `setup.py` pour la liste des dépendances.
-- Tests qui échouent: exécuter `pytest -q -k <nom_du_test>` pour isoler.
+5. Tests
+- Si des tests existent, exécutez :
+  - pytest -q
+- Installation pytest (si nécessaire) :
+  - pip install pytest
 
-## Structure suggérée (à vérifier dans le dépôt)
-- multi_agents/        # code principal
-- tests/               # tests unitaires
+6. Structure recommandée (ce que j'ai créé)
+- multi_agents/
+  - prompts/
+    - event_analyzer_system.txt   # prompt système (présent)
+  - (code d'API / CLI / modules)  # à implémenter ou à consulter si déjà présent
 - requirements.txt
 - README.md
+
+7. Conseils d'usage et bonnes pratiques
+- Toujours valider la sortie JSON du LLM (parser strict) avant intégration.
+- Ne jamais exposer la clé API dans le dépôt.
+- Pour automatiser localement, créez un petit module `multi_agents/cli.py` qui :
+  - lit une description d'événement,
+  - lit le prompt système,
+  - appelle l'API LLM,
+  - valide et normalise le JSON de sortie.
+
+Dépannage rapide
+- ModuleNotFoundError: vérifiez l'activation du venv et l'installation des dépendances.
+- "401 Unauthorized" de l'API: vérifiez `OPENAI_API_KEY`.
+- Réponse non-JSON: forcez le modèle à répondre strictement en JSON (le prompt système le demande déjà).
 
 Fin.

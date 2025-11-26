@@ -1,126 +1,219 @@
-from typing import Dict, Any, List
+from typing import Dict, Any, Optional, List
 import json
 
 from .base import Agent
-from multi_agents.core.models import (
-    EventAnalysis,
-    StylistOutput,
-    ProductSearchPlan,
-    OutfitWithProducts,
-    OutfitProductItem,
-    ProductSearchOutput,
-)
 from multi_agents.core.llm_client import LLMClient
-from multi_agents.core.product_provider import ProductProvider
-from multi_agents.core.fake_product_provider import FakeProductProvider
 from multi_agents.core.prompts import load_prompt
+from multi_agents.core.zalando_scraper import ZalandoScraper
+from multi_agents.core.models import (
+    EventUnderstanding,
+    StylistOutput,
+    ProductCandidate,
+    OutfitItemResolved,
+    ResolvedOutfit,
+    ProductSearchOutput,
+    QueryBuilderInput,
+    QueryBuilderOutput,
+    ProductSelectorInput,
+    ProductSelectorOutput,
+)
 
 
 class ProductSearchAgent(Agent):
     """
-    Agent intelligent de recherche produits :
-    - utilise un LLM pour planifier les recherches (budget par item, catégories, attributs)
-    - utilise un ProductProvider (fake ou scraper) pour chercher les articles
-    - compose des tenues complètes avec prix, liens, images
-    - respecte le budget global pour chaque tenue.
+    Agent de recherche produits / scraping :
+    - prend en entrée l'output du StylistAgent + le contexte d'événement,
+    - pour chaque article :
+        * génère une requête de recherche Zalando via un LLM (Query Builder),
+        * scrappe Zalando via Apify,
+        * sélectionne le meilleur produit via un LLM (Product Selector),
+    - renvoie des tenues enrichies avec un produit choisi par article.
     """
 
     def __init__(
         self,
-        llm_client: LLMClient | None = None,
-        provider: ProductProvider | None = None,
+        llm_client: Optional[LLMClient] = None,
+        scraper: Optional[ZalandoScraper] = None,
     ) -> None:
         super().__init__(name="product_search")
         self.llm = llm_client or LLMClient()
-        # En dev/test : FakeProductProvider, plus tard : ScraperProductProvider()
-        self.provider = provider or FakeProductProvider()
-        self.system_prompt = load_prompt("product_search_system.txt")
+        self.scraper = scraper or ZalandoScraper()
+
+        self.query_builder_system = load_prompt("query_builder_system.txt")
+        self.product_selector_system = load_prompt("product_selector_system.txt")
 
     def run(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        analysis: EventAnalysis = data["event_analysis"]
+        """
+        data attendu :
+        {
+          "event": EventUnderstanding,
+          "stylist_output": StylistOutput
+        }
+
+        Retour :
+        {
+          "product_search_output": ProductSearchOutput
+        }
+        """
+        event: EventUnderstanding = data["event"]
         stylist_output: StylistOutput = data["stylist_output"]
 
-        plan = self._plan_product_search(analysis, stylist_output)
-        outfits_with_products = self._execute_plan(analysis, plan)
+        resolved_outfits: List[ResolvedOutfit] = []
 
-        output: ProductSearchOutput = {
-            "outfits_with_products": outfits_with_products
-        }
+        for outfit in stylist_output["outfits"]:
+            resolved_items: List[OutfitItemResolved] = []
+
+            for item in outfit["items"]:
+                resolved = self._resolve_single_item(
+                    event=event,
+                    outfit=outfit,
+                    item=item,
+                )
+                if resolved is not None:
+                    resolved_items.append(resolved)
+
+            if not resolved_items:
+                continue
+
+            total_price = sum(it["chosen_product"]["price"] for it in resolved_items)
+
+            # Vérifier le budget global (si défini)
+            budget_global = event.get("budget")
+            if budget_global is not None and total_price > budget_global:
+                # On pourrait ici implémenter une stratégie plus intelligente,
+                # pour l'instant on ignore la tenue si elle dépasse le budget réel.
+                continue
+
+            resolved_outfits.append(
+                ResolvedOutfit(
+                    style_name=outfit["style_name"],
+                    description=outfit["description"],
+                    formality_level=outfit["formality_level"],
+                    total_budget=round(total_price, 2),
+                    items=resolved_items,
+                )
+            )
+
+        output: ProductSearchOutput = {"outfits": resolved_outfits}
         return {"product_search_output": output}
 
-    def _plan_product_search(
+    # ---------- Résolution d'un seul item ----------
+
+    def _resolve_single_item(
         self,
-        analysis: EventAnalysis,
-        stylist_output: StylistOutput,
-    ) -> ProductSearchPlan:
-        payload = {
-            "event_analysis": analysis,
-            "stylist_output": stylist_output,
+        event: EventUnderstanding,
+        outfit: Dict[str, Any],
+        item: Dict[str, Any],
+    ) -> Optional[OutfitItemResolved]:
+        """
+        Résout un item :
+        - construit la requête (QueryBuilder LLM)
+        - scrappe Zalando
+        - choisit le meilleur produit (ProductSelector LLM)
+        """
+        # 1) Query Builder LLM
+        qb_input: QueryBuilderInput = {
+            "item_name": item["name"],
+            "category": item["category"],
+            "max_price": float(item["max_price"]),
+            "style": event["style"],
+            "event_type": event["event_type"],
+            "formality_level": event["formality_level"],
+            "gender": event["gender"],
         }
 
-        user_prompt = json.dumps(payload, ensure_ascii=False, indent=2)
+        search_text, gender_path, max_price = self._build_query(qb_input)
 
-        raw = self.llm.chat(self.system_prompt, user_prompt)
-        try:
-            plan: ProductSearchPlan = json.loads(raw)
-        except json.JSONDecodeError:
-            plan = {"outfits_queries": []}
+        # 2) Scraper Zalando via Apify
+        candidates: List[ProductCandidate] = self.scraper.search(
+            search_text=search_text,
+            gender_path=gender_path,
+            max_price=max_price,
+        )
+        if not candidates:
+            return None
 
-        return plan
+        # 3) Product Selector LLM
+        selector_input: ProductSelectorInput = {
+            "item_name": item["name"],
+            "category": item["category"],
+            "style": event["style"],
+            "event_type": event["event_type"],
+            "formality_level": event["formality_level"],
+            "gender": event["gender"],
+            "candidates": candidates[:5],  # on limite à 5 pour le LLM
+        }
 
-    def _execute_plan(
+        chosen_product = self._select_product(selector_input, candidates)
+
+        if chosen_product is None:
+            return None
+
+        return OutfitItemResolved(
+            name=item["name"],
+            category=item["category"],
+            max_price=float(item["max_price"]),
+            chosen_product=chosen_product,
+        )
+
+    # ---------- Sous-fonctions LLM ----------
+
+    def _build_query(
         self,
-        analysis: EventAnalysis,
-        plan: ProductSearchPlan,
-    ) -> List[OutfitWithProducts]:
-        budget = analysis["budget"]
-        outfits_with_products: List[OutfitWithProducts] = []
+        qb_input: QueryBuilderInput,
+    ) -> tuple[str, str, float]:
+        user_prompt = (
+            "Voici les informations sur l'article à rechercher :\n\n"
+            + json.dumps(qb_input, ensure_ascii=False, indent=2)
+            + "\n\nConstruit la requête de recherche Zalando appropriée."
+        )
+        raw = self.llm.chat(self.query_builder_system, user_prompt)
 
-        for outfit_query in plan["outfits_queries"]:
-            items: List[OutfitProductItem] = []
-            total_price = 0.0
-            currency = "EUR"
+        try:
+            parsed: QueryBuilderOutput = json.loads(raw)
+        except json.JSONDecodeError:
+            # Fallback simple
+            search_text = f"{qb_input['item_name']} {qb_input['category']} {qb_input['gender']}"
+            gender_path = qb_input["gender"] if qb_input["gender"] in ("homme", "femme") else "unisex"
+            return search_text, gender_path, qb_input["max_price"]
 
-            for item_query in outfit_query["items_queries"]:
-                candidates = self.provider.search_products(item_query)
-                if not candidates:
-                    items = []
-                    total_price = 0.0
-                    break
+        search_text = parsed.get("search_text") or qb_input["item_name"]
+        gender_path = parsed.get("gender_path") or qb_input["gender"]
+        if gender_path not in ("homme", "femme", "unisex"):
+            gender_path = "unisex"
 
-                product = candidates[0]  # le moins cher
+        max_price = parsed.get("max_price", qb_input["max_price"])
+        try:
+            max_price = float(max_price)
+        except (TypeError, ValueError):
+            max_price = qb_input["max_price"]
 
-                total_price += product["price"]
-                currency = product["currency"]
+        return search_text, gender_path, max_price
 
-                # On arrête si on dépasse le budget global
-                if total_price > budget:
-                    items = []
-                    total_price = 0.0
-                    break
+    def _select_product(
+        self,
+        selector_input: ProductSelectorInput,
+        candidates: List[ProductCandidate],
+    ) -> Optional[ProductCandidate]:
+        user_prompt = (
+            "Voici le contexte et les produits candidats pour un article de la tenue :\n\n"
+            + json.dumps(selector_input, ensure_ascii=False, indent=2)
+            + "\n\nChoisis le meilleur produit en respectant les consignes du système."
+        )
 
-                items.append(
-                    OutfitProductItem(
-                        role=item_query["role"],
-                        product_id=product["id"],
-                        name=product["name"],
-                        price=product["price"],
-                        currency=product["currency"],
-                        product_url=product["product_url"],
-                        image_url=product["image_url"],
-                        source=product["source"],
-                    )
-                )
+        raw = self.llm.chat(self.product_selector_system, user_prompt)
 
-            if items and total_price <= budget:
-                outfits_with_products.append(
-                    OutfitWithProducts(
-                        style_name=outfit_query["style_name"],
-                        description=outfit_query["description"],
-                        items=items,
-                        total_price=round(total_price, 2),
-                        currency=currency,
-                    )
-                )
+        try:
+            parsed: ProductSelectorOutput = json.loads(raw)
+        except json.JSONDecodeError:
+            # Fallback : prendre le moins cher
+            return candidates[0] if candidates else None
 
-        return outfits_with_products
+        idx = parsed.get("chosen_index", 0)
+        if not isinstance(idx, int):
+            idx = 0
+
+        if idx < 0 or idx >= len(candidates):
+            idx = 0
+
+        return candidates[idx]
