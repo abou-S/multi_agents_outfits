@@ -1,0 +1,414 @@
+{
+  "event": {
+    "event_type": "mariage",
+    "time_of_day": "soirée",
+    "formality_level": "chic",
+    "style": "abayas, traditionnel",
+    "budget": 200.0,
+    "gender": "femme",
+    "age": 30
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Abaya Chic",
+        "description": "Abaya noire élégante avec des broderies dorées, portée sur une robe de soirée rouge vif et des sandales à talons pour un look chic et traditionnel.",
+        "formality_level": "chic",
+        "total_budget": 200.0,
+        "items": [
+          {
+            "name": "abaya noire",
+            "category": "manteau",
+            "max_price": 80.0
+          },
+          {
+            "name": "robe de soirée rouge",
+            "category": "robe",
+            "max_price": 70.0
+          },
+          {
+            "name": "sandalles à talons",
+            "category": "chaussures",
+            "max_price": 50.0
+          }
+        ]
+      },
+      {
+        "style_name": "Tenue Traditionnelle",
+        "description": "Robe traditionnelle aux couleurs vives avec des motifs géométriques, portée avec un foulard en soie et des boucles d'oreilles en argent pour un look authentique et élégant.",
+        "formality_level": "chic",
+        "total_budget": 200.0,
+        "items": [
+          {
+            "name": "robe traditionnelle",
+            "category": "robe",
+            "max_price": 100.0
+          },
+          {
+            "name": "foulard en soie",
+            "category": "accessoire",
+            "max_price": 30.0
+          },
+          {
+            "name": "boucles d'oreilles en argent",
+            "category": "bijou",
+            "max_price": 70.0
+          }
+        ]
+      },
+      {
+        "style_name": "Abaya Moderne",
+        "description": "Abaya beige moderne avec des lignes épurées, portée sur une robe de soirée noire et des escarpins pour un look chic et contemporain.",
+        "formality_level": "chic",
+        "total_budget": 200.0,
+        "items": [
+          {
+            "name": "abaya beige",
+            "category": "manteau",
+            "max_price": 90.0
+          },
+          {
+            "name": "robe de soirée noire",
+            "category": "robe",
+            "max_price": 60.0
+          },
+          {
+            "name": "escarpins",
+            "category": "chaussures",
+            "max_price": 50.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Abaya Chic",
+        "description": "Abaya noire élégante avec des broderies dorées, portée sur une robe de soirée rouge vif et des sandales à talons pour un look chic et traditionnel.",
+        "formality_level": "chic",
+        "total_budget": 103.12,
+        "items": [
+          {
+            "name": "abaya noire",
+            "category": "manteau",
+            "max_price": 80.0,
+            "chosen_product": {
+              "name": "ABAYA  - Cape - schwarz",
+              "brand": "Elara",
+              "price": 31.59,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/elara-robe-en-jersey-schwarz-e1n21u006-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/d514f89612364a71bf5502a2e18658cf/bb8c553144fa49c48a5f88860e43fb9d.jpg?imwidth=200",
+              "sku": "E1N21U006-Q11",
+              "color": "schwarz/noir"
+            }
+          },
+          {
+            "name": "robe de soirée rouge",
+            "category": "robe",
+            "max_price": 70.0,
+            "chosen_product": {
+              "name": "ABAYA - Robe de cocktail - fuchsia",
+              "brand": "Elara",
+              "price": 35.54,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/elara-abaya-robe-longue-fuchsia-e1n21c01e-j11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/6697461bb8874faf814f12d0c3b2715b/4a6f890615a34107b5e39e00da9616c3.jpg?imwidth=200",
+              "sku": "E1N21C01E-J11",
+              "color": "fuchsia/fuschia"
+            }
+          },
+          {
+            "name": "sandalles à talons",
+            "category": "chaussures",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "WIDE FIT DIAMANTE EMBELLISHED BLOCK HEEL - Chaussures de mariée - white",
+              "brand": "New Look Wide Fit",
+              "price": 35.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/new-look-sandales-white-nl011a1be-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/a0cb7ec3915b446ab1fd769f2ed7158b/b2d8862f997641cdbf8abd0d83f14eb8.jpg?imwidth=200",
+              "sku": "NL011A1BE-A11",
+              "color": "white/blanc"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Tenue Traditionnelle",
+        "description": "Robe traditionnelle aux couleurs vives avec des motifs géométriques, portée avec un foulard en soie et des boucles d'oreilles en argent pour un look authentique et élégant.",
+        "formality_level": "chic",
+        "total_budget": 73.54,
+        "items": [
+          {
+            "name": "robe traditionnelle",
+            "category": "robe",
+            "max_price": 100.0,
+            "chosen_product": {
+              "name": "ABAYA - Robe longue - hellrosa",
+              "brand": "Elara",
+              "price": 29.64,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/elara-robe-longue-hellrosa-e1n21c012-j11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/6433c1f113434333b739be0ea70ab28d/3600a88013c04519822b543917082d70.jpg?imwidth=200",
+              "sku": "E1N21C012-J11",
+              "color": "hellrosa/rose clair"
+            }
+          },
+          {
+            "name": "foulard en soie",
+            "category": "accessoire",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "SQUARE SCARF - Foulard - la dolce vita",
+              "brand": "Next",
+              "price": 16.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-echarpe-la-dolce-vita-nx351g0hw-g11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f0f3022b99da449c91b9af54ea947942/209a1e05100b437180e636f5a83f7722.jpg?imwidth=200",
+              "sku": "NX351G0HW-G11",
+              "color": "la dolce vita/rouge"
+            }
+          },
+          {
+            "name": "boucles d'oreilles en argent",
+            "category": "bijou",
+            "max_price": 70.0,
+            "chosen_product": {
+              "name": "OVAL LEAF - Boucles d'oreilles - silver coloured",
+              "brand": "Sofia Milani",
+              "price": 27.9,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/sofia-milani-boucles-doreilles-silver-sdb51l1c9-d11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/de7e2d791fca4b5594d923d5574d33aa/8c047a186b7d4958a62ff2bcba43e233.jpg?imwidth=200",
+              "sku": "SDB51L1C9-D11",
+              "color": "silver coloured/argenté"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Abaya Moderne",
+        "description": "Abaya beige moderne avec des lignes épurées, portée sur une robe de soirée noire et des escarpins pour un look chic et contemporain.",
+        "formality_level": "chic",
+        "total_budget": 89.02,
+        "items": [
+          {
+            "name": "abaya beige",
+            "category": "manteau",
+            "max_price": 90.0,
+            "chosen_product": {
+              "name": "ABAYA - Robe longue - braun",
+              "brand": "Elara",
+              "price": 31.04,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/elara-abaya-robe-longue-braun-e1n21c010-o11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/ec32aaa19de344408d2666a842960765/98ebdfeaca814d338c0220d85da33372.jpg?imwidth=200",
+              "sku": "E1N21C010-O11",
+              "color": "braun/marron"
+            }
+          },
+          {
+            "name": "robe de soirée noire",
+            "category": "robe",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "ABAYA  - Cape - schwarz",
+              "brand": "Elara",
+              "price": 31.59,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/elara-robe-en-jersey-schwarz-e1n21u006-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/d514f89612364a71bf5502a2e18658cf/bb8c553144fa49c48a5f88860e43fb9d.jpg?imwidth=200",
+              "sku": "E1N21U006-Q11",
+              "color": "schwarz/noir"
+            }
+          },
+          {
+            "name": "escarpins",
+            "category": "chaussures",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "Escarpins - white",
+              "brand": "Anna Field",
+              "price": 26.39,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/anna-field-escarpins-a-talons-hauts-white-an611b0gv-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/764f141a5d074c1a8bad8f98785441d5/c561f5afc4504d9b84e9bfbbc827d168.jpg?imwidth=200&filter=packshot",
+              "sku": "AN611B0GV-A11",
+              "color": "white/blanc"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Abaya Chic",
+      "description": "Abaya noire élégante avec des broderies dorées, portée sur une robe de soirée rouge vif et des sandales à talons pour un look chic et traditionnel.",
+      "formality_level": "chic",
+      "total_budget": 103.12,
+      "items": [
+        {
+          "name": "abaya noire",
+          "category": "manteau",
+          "max_price": 80.0,
+          "chosen_product": {
+            "name": "ABAYA  - Cape - schwarz",
+            "brand": "Elara",
+            "price": 31.59,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/elara-robe-en-jersey-schwarz-e1n21u006-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/d514f89612364a71bf5502a2e18658cf/bb8c553144fa49c48a5f88860e43fb9d.jpg?imwidth=200",
+            "sku": "E1N21U006-Q11",
+            "color": "schwarz/noir"
+          }
+        },
+        {
+          "name": "robe de soirée rouge",
+          "category": "robe",
+          "max_price": 70.0,
+          "chosen_product": {
+            "name": "ABAYA - Robe de cocktail - fuchsia",
+            "brand": "Elara",
+            "price": 35.54,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/elara-abaya-robe-longue-fuchsia-e1n21c01e-j11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/6697461bb8874faf814f12d0c3b2715b/4a6f890615a34107b5e39e00da9616c3.jpg?imwidth=200",
+            "sku": "E1N21C01E-J11",
+            "color": "fuchsia/fuschia"
+          }
+        },
+        {
+          "name": "sandalles à talons",
+          "category": "chaussures",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "WIDE FIT DIAMANTE EMBELLISHED BLOCK HEEL - Chaussures de mariée - white",
+            "brand": "New Look Wide Fit",
+            "price": 35.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/new-look-sandales-white-nl011a1be-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/a0cb7ec3915b446ab1fd769f2ed7158b/b2d8862f997641cdbf8abd0d83f14eb8.jpg?imwidth=200",
+            "sku": "NL011A1BE-A11",
+            "color": "white/blanc"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/2c674907-ee40-47c9-92aa-34d9cb063383.png",
+      "preview_prompt": "The first image is the base person. The other images are clothing references only. Keep the person from the first image as the base and dress them in a chic, traditional outfit inspired by the provided clothing images. The look should include a black abaya with golden embroidery, a bright red evening dress underneath, and white high-heeled sandals. The style should be abayas, traditional, and the overall look should be elegant and chic for a wedding evening event. Avoid mixing the faces or bodies of the models from the clothing images. The goal is to create a stylish, chic, and traditional look for a 30-year-old woman."
+    },
+    {
+      "style_name": "Tenue Traditionnelle",
+      "description": "Robe traditionnelle aux couleurs vives avec des motifs géométriques, portée avec un foulard en soie et des boucles d'oreilles en argent pour un look authentique et élégant.",
+      "formality_level": "chic",
+      "total_budget": 73.54,
+      "items": [
+        {
+          "name": "robe traditionnelle",
+          "category": "robe",
+          "max_price": 100.0,
+          "chosen_product": {
+            "name": "ABAYA - Robe longue - hellrosa",
+            "brand": "Elara",
+            "price": 29.64,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/elara-robe-longue-hellrosa-e1n21c012-j11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/6433c1f113434333b739be0ea70ab28d/3600a88013c04519822b543917082d70.jpg?imwidth=200",
+            "sku": "E1N21C012-J11",
+            "color": "hellrosa/rose clair"
+          }
+        },
+        {
+          "name": "foulard en soie",
+          "category": "accessoire",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "SQUARE SCARF - Foulard - la dolce vita",
+            "brand": "Next",
+            "price": 16.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-echarpe-la-dolce-vita-nx351g0hw-g11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f0f3022b99da449c91b9af54ea947942/209a1e05100b437180e636f5a83f7722.jpg?imwidth=200",
+            "sku": "NX351G0HW-G11",
+            "color": "la dolce vita/rouge"
+          }
+        },
+        {
+          "name": "boucles d'oreilles en argent",
+          "category": "bijou",
+          "max_price": 70.0,
+          "chosen_product": {
+            "name": "OVAL LEAF - Boucles d'oreilles - silver coloured",
+            "brand": "Sofia Milani",
+            "price": 27.9,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/sofia-milani-boucles-doreilles-silver-sdb51l1c9-d11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/de7e2d791fca4b5594d923d5574d33aa/8c047a186b7d4958a62ff2bcba43e233.jpg?imwidth=200",
+            "sku": "SDB51L1C9-D11",
+            "color": "silver coloured/argenté"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/01413ab6-f759-41ae-94f7-c2f71bd82064.png",
+      "preview_prompt": "Keep the person from the first image as the base, and use the other images as references for clothing only, ignoring the mannequins. Dress the base person in a traditional outfit inspired by the provided images, featuring a hellrosa long dress with geometric patterns, paired with a red silk scarf and silver-colored oval leaf earrings. The overall look should be chic and traditional, suitable for a wedding evening event, with a focus on authentic and elegant style. Ensure the face and body of the base person remain unchanged, and only the clothing and accessories from the reference images are incorporated into the final look."
+    },
+    {
+      "style_name": "Abaya Moderne",
+      "description": "Abaya beige moderne avec des lignes épurées, portée sur une robe de soirée noire et des escarpins pour un look chic et contemporain.",
+      "formality_level": "chic",
+      "total_budget": 89.02,
+      "items": [
+        {
+          "name": "abaya beige",
+          "category": "manteau",
+          "max_price": 90.0,
+          "chosen_product": {
+            "name": "ABAYA - Robe longue - braun",
+            "brand": "Elara",
+            "price": 31.04,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/elara-abaya-robe-longue-braun-e1n21c010-o11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/ec32aaa19de344408d2666a842960765/98ebdfeaca814d338c0220d85da33372.jpg?imwidth=200",
+            "sku": "E1N21C010-O11",
+            "color": "braun/marron"
+          }
+        },
+        {
+          "name": "robe de soirée noire",
+          "category": "robe",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "ABAYA  - Cape - schwarz",
+            "brand": "Elara",
+            "price": 31.59,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/elara-robe-en-jersey-schwarz-e1n21u006-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/d514f89612364a71bf5502a2e18658cf/bb8c553144fa49c48a5f88860e43fb9d.jpg?imwidth=200",
+            "sku": "E1N21U006-Q11",
+            "color": "schwarz/noir"
+          }
+        },
+        {
+          "name": "escarpins",
+          "category": "chaussures",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "Escarpins - white",
+            "brand": "Anna Field",
+            "price": 26.39,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/anna-field-escarpins-a-talons-hauts-white-an611b0gv-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/764f141a5d074c1a8bad8f98785441d5/c561f5afc4504d9b84e9bfbbc827d168.jpg?imwidth=200&filter=packshot",
+            "sku": "AN611B0GV-A11",
+            "color": "white/blanc"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/d32399a5-403c-4acf-9eff-53f59f2a0812.png",
+      "preview_prompt": "Keep the person from the first image as the base, and use the other images as references for the clothing only, ignoring the mannequins. Dress the person in a chic, modern abaya outfit, consisting of a beige abaya with clean lines, a black evening dress underneath, and white high heels. Ensure the overall look is traditional yet contemporary, with a focus on elegance and sophistication, suitable for a wedding evening event. Maintain the person's facial features, skin tone, and body morphology, and avoid mixing with the mannequins' faces or bodies from the clothing reference images."
+    }
+  ]
+}

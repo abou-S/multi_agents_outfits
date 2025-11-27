@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+streamlit_app1.py
+streamlit_app2.py
+
+
 # C extensions
 *.so
 

@@ -1,0 +1,288 @@
+{
+  "event": {
+    "event_type": "mariage",
+    "time_of_day": "soirée",
+    "formality_level": "chic",
+    "style": "minimaliste",
+    "budget": 150.0,
+    "gender": "femme",
+    "age": 30
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Élégance Minimaliste",
+        "description": "Robe noire simple avec des détails subtils et des chaussures à talons pour un look élégant et minimaliste.",
+        "formality_level": "chic",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "robe noire",
+            "category": "robe",
+            "max_price": 80.0
+          },
+          {
+            "name": "chaussures à talons noires",
+            "category": "chaussures",
+            "max_price": 40.0
+          },
+          {
+            "name": "collier simple",
+            "category": "accessoire",
+            "max_price": 30.0
+          }
+        ]
+      },
+      {
+        "style_name": "Chic Simplicité",
+        "description": "Combinaison de pantalon et de top en soie avec une veste pour un look chic et sobre.",
+        "formality_level": "chic",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "pantalon noir",
+            "category": "pantalon",
+            "max_price": 40.0
+          },
+          {
+            "name": "top en soie blanc",
+            "category": "top",
+            "max_price": 30.0
+          },
+          {
+            "name": "veste noire",
+            "category": "veste",
+            "max_price": 40.0
+          },
+          {
+            "name": "chaussures plates noires",
+            "category": "chaussures",
+            "max_price": 40.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Élégance Minimaliste",
+        "description": "Robe noire simple avec des détails subtils et des chaussures à talons pour un look élégant et minimaliste.",
+        "formality_level": "chic",
+        "total_budget": 65.28,
+        "items": [
+          {
+            "name": "robe noire",
+            "category": "robe",
+            "max_price": 80.0,
+            "chosen_product": {
+              "name": "Robe de soirée - black",
+              "brand": "Anna Field",
+              "price": 31.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/anna-field-robe-en-jersey-black-an621c2du-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/d7bd369562cb4c0baf0b560a9a6d35c6/d4a708a873ad4ff3a2573c6121fec0d5.jpg?imwidth=200",
+              "sku": "AN621C2DU-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chaussures à talons noires",
+            "category": "chaussures",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "Escarpins - black",
+              "brand": "Even&Odd Wide Fit",
+              "price": 19.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/evenandodd-wide-fit-escarpins-black-evc11b011-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/a951bb0073ed40278be89245a7e0be00/c9024b0bed7043bc8936000669aa94f4.jpg?imwidth=200&filter=packshot",
+              "sku": "EVC11B011-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "collier simple",
+            "category": "accessoire",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "MOON - Collier - doré cristal",
+              "brand": "MYC Paris",
+              "price": 13.3,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/myc-paris-moon-collier-dore-cristal-myv51l07w-f12.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/2c02eb70b07e4249850364a24a31e887/220e5c0bce444468b49b17f3b5f07e13.jpg?imwidth=200",
+              "sku": "MYV51L07W-F12",
+              "color": "doré cristal/doré"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Chic Simplicité",
+        "description": "Combinaison de pantalon et de top en soie avec une veste pour un look chic et sobre.",
+        "formality_level": "chic",
+        "total_budget": 59.23,
+        "items": [
+          {
+            "name": "top en soie blanc",
+            "category": "top",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "YELENA - Débardeur - light white",
+              "brand": "Lindex",
+              "price": 18.75,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/lindex-yelena-debardeur-light-white-l2e21d07f-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/0f291f43afcd40d9895c6589814fea3f/bfd4c66489d64ac0a03fc762ae523c54.jpg?imwidth=200",
+              "sku": "L2E21D07F-A11",
+              "color": "light white/blanc"
+            }
+          },
+          {
+            "name": "veste noire",
+            "category": "veste",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "VMEVA 3/4 LOOSE NOOS - Blazer - black",
+              "brand": "Vero Moda",
+              "price": 21.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/vero-moda-vmeva-blazer-black-ve121g1hu-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/d24cf5769bae4c45a56cf8ac5506f6f7/09993a98a65141dcb70764878c3044db.jpg?imwidth=200",
+              "sku": "VE121G1HU-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chaussures plates noires",
+            "category": "chaussures",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "Ballerines - black",
+              "brand": "Anna Field Wide Fit",
+              "price": 18.49,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/anna-field-wide-fit-ballerines-black-anj11a05e-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f41ad466a7d94b7aa1c04bd6454c6e3a/a7d43d759eb4423785dbe2b69c2633b1.jpg?imwidth=200&filter=packshot",
+              "sku": "ANJ11A05E-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Élégance Minimaliste",
+      "description": "Robe noire simple avec des détails subtils et des chaussures à talons pour un look élégant et minimaliste.",
+      "formality_level": "chic",
+      "total_budget": 65.28,
+      "items": [
+        {
+          "name": "robe noire",
+          "category": "robe",
+          "max_price": 80.0,
+          "chosen_product": {
+            "name": "Robe de soirée - black",
+            "brand": "Anna Field",
+            "price": 31.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/anna-field-robe-en-jersey-black-an621c2du-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/d7bd369562cb4c0baf0b560a9a6d35c6/d4a708a873ad4ff3a2573c6121fec0d5.jpg?imwidth=200",
+            "sku": "AN621C2DU-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chaussures à talons noires",
+          "category": "chaussures",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "Escarpins - black",
+            "brand": "Even&Odd Wide Fit",
+            "price": 19.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/evenandodd-wide-fit-escarpins-black-evc11b011-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/a951bb0073ed40278be89245a7e0be00/c9024b0bed7043bc8936000669aa94f4.jpg?imwidth=200&filter=packshot",
+            "sku": "EVC11B011-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "collier simple",
+          "category": "accessoire",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "MOON - Collier - doré cristal",
+            "brand": "MYC Paris",
+            "price": 13.3,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/myc-paris-moon-collier-dore-cristal-myv51l07w-f12.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/2c02eb70b07e4249850364a24a31e887/220e5c0bce444468b49b17f3b5f07e13.jpg?imwidth=200",
+            "sku": "MYV51L07W-F12",
+            "color": "doré cristal/doré"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/0f31211d-2846-411e-aad7-703177eb6975.png",
+      "preview_prompt": "Use the first image as the base person, keeping their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and focus on the garments. Dress the base person in a chic, minimalist outfit consisting of a black dress, black high heels, and a simple golden crystal necklace. The overall look should be elegant and sophisticated, perfect for a wedding evening event. Ensure the style is minimalist and the formality level is chic, avoiding any excessive accessories or bold patterns. The result should be a refined and stylish image of the person in the chosen outfit, respecting the described style and event context."
+    },
+    {
+      "style_name": "Chic Simplicité",
+      "description": "Combinaison de pantalon et de top en soie avec une veste pour un look chic et sobre.",
+      "formality_level": "chic",
+      "total_budget": 59.23,
+      "items": [
+        {
+          "name": "top en soie blanc",
+          "category": "top",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "YELENA - Débardeur - light white",
+            "brand": "Lindex",
+            "price": 18.75,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/lindex-yelena-debardeur-light-white-l2e21d07f-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/0f291f43afcd40d9895c6589814fea3f/bfd4c66489d64ac0a03fc762ae523c54.jpg?imwidth=200",
+            "sku": "L2E21D07F-A11",
+            "color": "light white/blanc"
+          }
+        },
+        {
+          "name": "veste noire",
+          "category": "veste",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "VMEVA 3/4 LOOSE NOOS - Blazer - black",
+            "brand": "Vero Moda",
+            "price": 21.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/vero-moda-vmeva-blazer-black-ve121g1hu-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/d24cf5769bae4c45a56cf8ac5506f6f7/09993a98a65141dcb70764878c3044db.jpg?imwidth=200",
+            "sku": "VE121G1HU-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chaussures plates noires",
+          "category": "chaussures",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "Ballerines - black",
+            "brand": "Anna Field Wide Fit",
+            "price": 18.49,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/anna-field-wide-fit-ballerines-black-anj11a05e-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f41ad466a7d94b7aa1c04bd6454c6e3a/a7d43d759eb4423785dbe2b69c2633b1.jpg?imwidth=200&filter=packshot",
+            "sku": "ANJ11A05E-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/fa7468f0-6f2c-4506-acb1-4f55f634f6bc.png",
+      "preview_prompt": "Use the first image as the base person, keeping their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and focus on the garments. Dress the base person in a chic, minimalist outfit consisting of a light white silk top, a black blazer, and black flat shoes, inspired by the provided clothing images. The overall look should be a navy-free, elegant combination of white and black, with clean lines and minimal accessories, suitable for a chic evening wedding. Ensure the generated image respects the base person's identity and the described outfit, without mixing faces or bodies from the clothing reference images."
+    }
+  ]
+}

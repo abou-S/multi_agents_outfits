@@ -1,9 +1,6 @@
 import os
 import sys
-import json
 from typing import Any, Dict, List, Optional
-from datetime import datetime
-from pathlib import Path
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -17,25 +14,7 @@ from multi_agents.orchestrator import Orchestrator  # type: ignore
 load_dotenv()
 
 
-def run_pipeline_with_orchestrator(
-    description: str,
-    budget: Optional[float],
-    gender: str,
-    age: Optional[int],
-    user_image_url: Optional[str],
-) -> Dict[str, Any]:
-    orchestrator = Orchestrator()
-    result = orchestrator.run_pipeline(
-        description=description,
-        ui_budget=budget,
-        ui_gender=gender,
-        ui_age=age,
-        user_image_url=user_image_url,
-    )
-    return result
-
-
-# ------------ UI Streamlit ------------ #
+# ================== UI Streamlit ================== #
 
 st.set_page_config(
     page_title="AI Outfit Assistant",
@@ -43,7 +22,7 @@ st.set_page_config(
     layout="wide",
 )
 
-# Un peu de CSS pour rendre l’UI plus clean
+# CSS perso (cartes + scroll horizontal)
 st.markdown(
     """
     <style>
@@ -109,52 +88,41 @@ st.markdown(
 
 # ====== Header ====== #
 st.title("🧥 AI Outfit Assistant")
-st.caption("Trouve des tenues adaptées à ton événement, ton style et ton budget – avec preview visuelle IA.")
+st.caption("Décris ton événement, et l’IA génère des tenues complètes, des articles et un aperçu visuel.")
 
-# ====== Formulaire (full width, comme ton wireframe) ====== #
+
+# ====== Formulaire ====== #
 st.markdown("---")
 st.subheader("📝 Décris ton besoin")
 
 with st.form("outfit_form"):
-    description = st.text_area(
+    description_text = st.text_area(
         "Décris l'événement et ton style",
         value="Je vais à un mariage le soir, ambiance chic, style minimaliste.",
-        help="Parle de l'événement, du contexte, de ton style, etc.",
         height=140,
     )
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        budget_str = st.text_input(
-            "Budget total (en € – optionnel)",
-            value="150",
-            help="Laisse vide si tu veux que l'IA l'infère à partir de ta description.",
-        )
+        budget_str = st.text_input("Budget total (€ – optionnel)", value="150")
 
     with col2:
-        gender = st.selectbox(
-            "Genre",
-            options=["homme", "femme"],
-            index=0,
-        )
+        gender = st.selectbox("Genre", options=["homme", "femme"], index=0)
 
     with col3:
-        age_str = st.text_input(
-            "Âge (optionnel)",
-            value="30",
-        )
+        age_str = st.text_input("Âge (optionnel)", value="30")
 
     user_image_url = st.text_input(
         "URL de ta photo (optionnel)",
         value="",
-        help="Pour l'instant, colle ici une URL d'image publique (raw GitHub, hébergeur d'image, etc.).",
+        help="Colle une URL d’image publique (raw GitHub, ou hébergement).",
     )
 
     submitted = st.form_submit_button("🚀 Générer les tenues")
 
 
-# ====== Helpers pour parser les nombres ====== #
+# ====== Helpers ====== #
 def parse_float(x: str) -> Optional[float]:
     x = x.strip()
     if not x:
@@ -180,140 +148,172 @@ age = parse_int(age_str)
 user_image_url = user_image_url.strip() or None
 
 
-# ====== Logique principale ====== #
+# ================== Pipeline avec progression ================== #
 if submitted:
-    if not description.strip():
+    if not description_text.strip():
         st.error("Merci de décrire l'événement avant de lancer l'analyse.")
-    else:
-        with st.spinner("Analyse de l'événement, génération des tenues et recherche de produits... ⏳"):
-            try:
-                result = run_pipeline_with_orchestrator(
-                    description=description,
-                    budget=budget,
-                    gender=gender,
-                    age=age,
-                    user_image_url=user_image_url,
-                )
-            except Exception as e:
-                st.error(f"Erreur lors de l'exécution du pipeline : {e}")
-                st.stop()
+        st.stop()
 
-        event = result.get("event", {})
-        product_search_output = result.get("product_search_output", {})
-        final_outfits: List[Dict[str, Any]] = result.get("final_outfits", [])
+    final_description = description_text.strip()
 
-        # ====== Logging backend du JSON final ====== #
-        logs_dir = Path("logs")
-        logs_dir.mkdir(exist_ok=True)
-        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        log_path = logs_dir / f"session_{ts}.json"
+    # Placeholders de statut
+    progress_bar = st.progress(0, text="Initialisation du pipeline...")
+    status_box = st.empty()
 
-        with open(log_path, "w", encoding="utf-8") as f:
-            json.dump(result, f, ensure_ascii=False, indent=2)
+    orchestrator = Orchestrator()
 
-        st.success(f"Résultat sauvegardé dans `{log_path}` (backend).")
-
-        # Bouton pour télécharger le JSON final directement
-        st.download_button(
-            label="💾 Télécharger le JSON complet",
-            data=json.dumps(result, ensure_ascii=False, indent=2),
-            file_name=f"outfit_session_{ts}.json",
-            mime="application/json",
+    try:
+        # 1) Analyse de l'événement
+        progress_bar.progress(15, text="Analyse de ta demande (EventAnalyzer)...")
+        status_box.info("🧠 Analyse de ta demande (type d'événement, moment de la journée, style, budget...)")
+        event = orchestrator._run_event_analyzer(
+            description=final_description,
+            ui_budget=budget,
+            ui_gender=gender,
+            ui_age=age,
         )
 
-        # ====== Bloc Analyse de l'événement (repliable) ====== #
-        with st.expander("🧠 Analyse de ta demande (Event Analyzer)", expanded=False):
-            st.json(event)
+        # 2) Génération des tenues par le Styliste
+        progress_bar.progress(40, text="Génération des idées de tenues (Stylist)...")
+        status_box.info("🎨 Le Styliste IA propose des idées de tenues adaptées à ton contexte et ton budget...")
+        stylist_output = orchestrator._run_stylist(event)
 
-        # ====== Affichage des tenues finales ====== #
-        st.markdown("---")
-        st.subheader("👗 Tenues générées")
+        # 3) Recherche produits Zalando
+        progress_bar.progress(70, text="Recherche des articles sur Zalando...")
+        status_box.info("🛒 Recherche des articles correspondants sur Zalando (veste, chemise, chaussures, etc.)...")
+        product_search_output = orchestrator._run_product_search(
+            event=event,
+            stylist_output=stylist_output,
+        )
 
-        if not final_outfits:
-            st.warning(
-                "Aucune tenue n'a pu être générée avec ces paramètres. "
-                "Essaie avec un budget plus élevé ou une description différente."
+        # 4) Génération de l’aperçu IA (mannequin)
+        if user_image_url:
+            progress_bar.progress(90, text="Génération de l'aperçu visuel (mannequin IA)...")
+            status_box.info("🧍‍♂️ Génération de l’aperçu visuel de la tenue sur ton mannequin...")
+            final_outfits = orchestrator._run_visualizer(
+                event=event,
+                product_search_output=product_search_output,
+                user_image_url=user_image_url,
             )
         else:
-            for idx, outfit in enumerate(final_outfits):
-                st.markdown(f"#### Tenue {idx + 1} — {outfit.get('style_name', 'Sans nom')}")
+            progress_bar.progress(90, text="Finalisation des tenues (sans aperçu visuel)...")
+            status_box.info("✅ Tenues générées (sans mannequin, aucune photo utilisateur fournie).")
+            final_outfits = product_search_output["outfits"]
 
-                # Container global pour la tenue (style carte)
-                with st.container():
-                    st.markdown('<div class="outfit-card">', unsafe_allow_html=True)
+        progress_bar.progress(100, text="Terminé ✅")
+        status_box.success("✨ Tenues générées avec succès !")
 
-                    col_img, col_info = st.columns([1.3, 2])
+    except Exception as e:
+        progress_bar.empty()
+        status_box.error(f"Erreur lors du pipeline : {e}")
+        st.stop()
 
-                    # ==== Colonne image générée ==== #
-                    with col_img:
-                        preview_url = outfit.get("preview_image_url")
-                        if preview_url:
-                            st.image(preview_url, caption="Aperçu IA", use_container_width=True)
-                        else:
-                            st.info(
-                                "Aucun aperçu visuel généré pour cette tenue "
-                                "(pas de photo utilisateur ou erreur Modelslab)."
-                            )
+    # ================== Affichage UI final ================== #
 
-                    # ==== Colonne infos + articles ==== #
-                    with col_info:
-                        st.markdown(
-                            f"<div class='small-label'>INFORMATIONS TENUE</div>",
-                            unsafe_allow_html=True,
+    # Résumé de l'événement
+    st.markdown("---")
+    st.subheader("🎯 Résumé de l'événement")
+
+    event_type = event.get("event_type", "événement")
+    time_of_day = event.get("time_of_day", "")
+    formality = event.get("formality_level", "")
+    style = event.get("style", "")
+    ev_budget = event.get("budget")
+    gender_ev = event.get("gender")
+    age_ev = event.get("age")
+
+    line = f"Tu cherches une tenue pour un **{event_type}**"
+    if time_of_day:
+        line += f" en **{time_of_day}**"
+    if formality:
+        line += f", style **{formality}**"
+    if style:
+        line += f", touche **{style}**"
+    if ev_budget:
+        line += f", budget **{ev_budget:.0f}€**"
+    if gender_ev or age_ev:
+        info = []
+        if gender_ev:
+            info.append(gender_ev)
+        if age_ev:
+            info.append(f"{age_ev} ans")
+        line += f" ({', '.join(info)})."
+
+    st.markdown(line)
+
+    # Tenues
+    st.markdown("---")
+    st.subheader("👗 Tenues générées")
+
+    if not final_outfits:
+        st.warning("Aucune tenue trouvée. Essaie avec un budget plus élevé.")
+        st.stop()
+
+    for idx, outfit in enumerate(final_outfits):
+        st.markdown(f"### Tenue {idx + 1} — {outfit.get('style_name', 'Sans nom')}")
+
+        with st.container():
+            st.markdown('<div class="outfit-card">', unsafe_allow_html=True)
+
+            col_img, col_info = st.columns([1.3, 2])
+
+            # Aperçu IA
+            with col_img:
+                preview = outfit.get("preview_image_url")
+                if preview:
+                    st.image(preview, caption="Aperçu IA", use_container_width=True)
+                else:
+                    st.info("Aucun aperçu visuel généré (pas de photo user ?).")
+
+            # Infos tenue + articles
+            with col_info:
+                st.markdown(
+                    "<div class='small-label'>INFORMATIONS TENUE</div>",
+                    unsafe_allow_html=True,
+                )
+
+                st.markdown(f"**Description :** {outfit.get('description', '')}")
+                st.markdown(
+                    f"**Formalité :** {outfit.get('formality_level', '').capitalize()} | "
+                    f"**Total estimé :** {outfit.get('total_budget', 0):.2f} €"
+                )
+
+                items = outfit.get("items", [])
+                if items:
+                    st.markdown(
+                        "<div class='small-label' style='margin-top:0.8rem;'>ARTICLES</div>",
+                        unsafe_allow_html=True,
+                    )
+
+                    html = "<div class='items-scroll'>"
+                    for item in items:
+                        p = item.get("chosen_product", {})
+                        img = p.get("image")
+                        name = p.get("name", "Produit")
+                        brand = p.get("brand", "N/A")
+                        color = p.get("color", "N/A")
+                        price = p.get("price", 0)
+                        url = p.get("url", "")
+
+                        html += "<div class='item-card'>"
+                        if img:
+                            html += f"<img src='{img}'/>"
+                        html += f"<div class='item-title'>{name}</div>"
+                        html += (
+                            f"<p class='item-meta'>Marque : {brand}<br/>"
+                            f"Couleur : {color}<br/>"
+                            f"Prix : {price:.2f} €</p>"
                         )
-                        st.markdown(f"**Description :** {outfit.get('description', '')}")
-                        st.markdown(
-                            f"**Formalité :** {outfit.get('formality_level', '').capitalize()} &nbsp;&nbsp; | "
-                            f" **Total estimé :** {outfit.get('total_budget', 0):.2f} €"
-                        )
-
-                        items: List[Dict[str, Any]] = outfit.get("items", [])
-
-                        if items:
-                            st.markdown(
-                                "<div class='small-label' style='margin-top:0.8rem;'>ARTICLES</div>",
-                                unsafe_allow_html=True,
+                        if url:
+                            html += (
+                                f"<a class='item-link' href='{url}' target='_blank'>"
+                                "Voir l’article →</a>"
                             )
+                        html += "</div>"
 
-                            # Génération HTML des cards articles (scroll horizontal)
-                            cards_html = "<div class='items-scroll'>"
-                            for item in items:
-                                chosen = item.get("chosen_product", {})
-                                img_url = chosen.get("image")
-                                product_name = chosen.get("name", "Produit")
-                                brand = chosen.get("brand", "N/A")
-                                color = chosen.get("color", "N/A")
-                                price = chosen.get("price", 0)
-                                url = chosen.get("url")
+                    html += "</div>"
+                    st.markdown(html, unsafe_allow_html=True)
+                else:
+                    st.info("Aucun article pour cette tenue.")
 
-                                cards_html += "<div class='item-card'>"
-
-                                if img_url:
-                                    cards_html += f"<img src='{img_url}' alt='article' />"
-
-                                cards_html += f"<div class='item-title'>{product_name}</div>"
-                                cards_html += (
-                                    f"<p class='item-meta'>Marque : {brand}<br/>"
-                                    f"Couleur : {color}<br/>"
-                                    f"Prix : {price:.2f} €</p>"
-                                )
-                                if url:
-                                    cards_html += (
-                                        f"<a class='item-link' href='{url}' target='_blank'>"
-                                        "Voir sur le site marchand →</a>"
-                                    )
-
-                                cards_html += "</div>"  # fin item-card
-
-                            cards_html += "</div>"  # fin items-scroll
-
-                            st.markdown(cards_html, unsafe_allow_html=True)
-                        else:
-                            st.info("Aucun article trouvé pour cette tenue.")
-
-                    st.markdown("</div>", unsafe_allow_html=True)  # fin outfit-card
-
-                # Optionnel : prompt utilisé pour l'image (debug)
-                if outfit.get("preview_prompt"):
-                    with st.expander("🧪 Prompt utilisé pour l'image (debug)", expanded=False):
-                        st.code(outfit["preview_prompt"])
+            st.markdown("</div>", unsafe_allow_html=True)
