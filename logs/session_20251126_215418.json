@@ -1,0 +1,283 @@
+{
+  "event": {
+    "event_type": "plage",
+    "time_of_day": "non précisé",
+    "formality_level": "décontracté",
+    "style": "minimaliste",
+    "budget": 150.0,
+    "gender": "homme",
+    "age": 25
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Minimaliste plage",
+        "description": "Short de bain noir avec un t-shirt blanc et des lunettes de soleil pour un look décontracté et minimaliste.",
+        "formality_level": "décontracté",
+        "total_budget": 120.0,
+        "items": [
+          {
+            "name": "short de bain noir",
+            "category": "short",
+            "max_price": 50.0
+          },
+          {
+            "name": "t-shirt blanc",
+            "category": "t-shirt",
+            "max_price": 30.0
+          },
+          {
+            "name": "lunettes de soleil",
+            "category": "accessoire",
+            "max_price": 40.0
+          }
+        ]
+      },
+      {
+        "style_name": "Décontracté chic",
+        "description": "Pantalon de lin beige avec un t-shirt gris et des sandales pour un look décontracté mais élégant.",
+        "formality_level": "décontracté",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "pantalon de lin beige",
+            "category": "pantalon",
+            "max_price": 60.0
+          },
+          {
+            "name": "t-shirt gris",
+            "category": "t-shirt",
+            "max_price": 35.0
+          },
+          {
+            "name": "sandalles",
+            "category": "chaussures",
+            "max_price": 55.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Minimaliste plage",
+        "description": "Short de bain noir avec un t-shirt blanc et des lunettes de soleil pour un look décontracté et minimaliste.",
+        "formality_level": "décontracté",
+        "total_budget": 29.42,
+        "items": [
+          {
+            "name": "short de bain noir",
+            "category": "short",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "TRUNK - Caleçon de bain - black",
+              "brand": "Urban Classics",
+              "price": 11.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/urban-classics-trunk-calecon-de-bain-black-ur682h00g-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/9a33b0dda3303b8cad3f7500d7297a8b/267353ce069d49608421bee05b95ba3a.jpg?imwidth=200",
+              "sku": "UR682H00G-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "t-shirt blanc",
+            "category": "t-shirt",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "T-shirt basique - bright white",
+              "brand": "Pier One",
+              "price": 10.44,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-t-shirt-basique-bright-white-pi922o14s-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f31ca7c1d7f3499584146c6847188662/24f632db47e4470194c46600f738b45d.jpg?imwidth=200",
+              "sku": "PI922O14S-A11",
+              "color": "bright white/blanc"
+            }
+          },
+          {
+            "name": "lunettes de soleil",
+            "category": "accessoire",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "Lunettes de soleil - brown",
+              "brand": "Urban Classics",
+              "price": 6.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/urban-classics-bol-pour-enfants-brown-ur654k01z-o11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/b5232135082449eba4d83ba0278ee388/62919e234f0a4d878bb206f4109b24a3.jpg?imwidth=200&filter=packshot",
+              "sku": "UR654K01Z-O11",
+              "color": "brown/marron"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Décontracté chic",
+        "description": "Pantalon de lin beige avec un t-shirt gris et des sandales pour un look décontracté mais élégant.",
+        "formality_level": "décontracté",
+        "total_budget": 50.45,
+        "items": [
+          {
+            "name": "pantalon de lin beige",
+            "category": "pantalon",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "REGULAR FIT TEXTURED - Pantalon classique - neutral",
+              "brand": "Next",
+              "price": 22.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-regular-fit-textured-pantalon-classique-neutral-nx322e197-b11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/e1924401ae384c7fa3fb703ccfc7751c/81a62e3b013442d59b371143d41b5068.jpg?imwidth=200",
+              "sku": "NX322E197-B11",
+              "color": "neutral/beige"
+            }
+          },
+          {
+            "name": "t-shirt gris",
+            "category": "t-shirt",
+            "max_price": 35.0,
+            "chosen_product": {
+              "name": "AKILO - T-shirt basique - gris chiné",
+              "brand": "Lee Cooper",
+              "price": 12.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/lee-cooper-akilo-t-shirt-basique-gris-chine-1le22o0dg-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/d9358852d59744648d369e7c884fa20a/1b7b71007031440689aa1ef59966ff19.jpg?imwidth=200",
+              "sku": "1LE22O0DG-C11",
+              "color": "gris chiné"
+            }
+          },
+          {
+            "name": "sandalles",
+            "category": "chaussures",
+            "max_price": 55.0,
+            "chosen_product": {
+              "name": "FLIP FLOPS - Mules - naval blue",
+              "brand": "Pepe Jeans",
+              "price": 16.45,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pepe-jeans-flip-flops-sandales-de-bain-naval-blue-pe112g030-k11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/ae123ce5b3154c6f8d2e8880a2300c30/4612fe78a49f4ef39acf33714c889b20.jpg?imwidth=200&filter=packshot",
+              "sku": "PE112G030-K11",
+              "color": "naval blue/bleu"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Minimaliste plage",
+      "description": "Short de bain noir avec un t-shirt blanc et des lunettes de soleil pour un look décontracté et minimaliste.",
+      "formality_level": "décontracté",
+      "total_budget": 29.42,
+      "items": [
+        {
+          "name": "short de bain noir",
+          "category": "short",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "TRUNK - Caleçon de bain - black",
+            "brand": "Urban Classics",
+            "price": 11.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/urban-classics-trunk-calecon-de-bain-black-ur682h00g-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/9a33b0dda3303b8cad3f7500d7297a8b/267353ce069d49608421bee05b95ba3a.jpg?imwidth=200",
+            "sku": "UR682H00G-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "t-shirt blanc",
+          "category": "t-shirt",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "T-shirt basique - bright white",
+            "brand": "Pier One",
+            "price": 10.44,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-t-shirt-basique-bright-white-pi922o14s-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f31ca7c1d7f3499584146c6847188662/24f632db47e4470194c46600f738b45d.jpg?imwidth=200",
+            "sku": "PI922O14S-A11",
+            "color": "bright white/blanc"
+          }
+        },
+        {
+          "name": "lunettes de soleil",
+          "category": "accessoire",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "Lunettes de soleil - brown",
+            "brand": "Urban Classics",
+            "price": 6.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/urban-classics-bol-pour-enfants-brown-ur654k01z-o11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/b5232135082449eba4d83ba0278ee388/62919e234f0a4d878bb206f4109b24a3.jpg?imwidth=200&filter=packshot",
+            "sku": "UR654K01Z-O11",
+            "color": "brown/marron"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/0d5c6173-9a0b-4b70-a711-3c3a6bb9e733.png",
+      "preview_prompt": "Use the first image as the base person, keeping their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and focus on the garments. Dress the person in a black swim short, a white basic t-shirt, and brown sunglasses, creating a minimalist and casual look for a beach event. Ensure the style is relaxed and minimalist, with clean lines and minimal accessories, fitting for a 25-year-old man. The overall look should be a navy-free, simple, and comfortable outfit, perfect for a day at the beach."
+    },
+    {
+      "style_name": "Décontracté chic",
+      "description": "Pantalon de lin beige avec un t-shirt gris et des sandales pour un look décontracté mais élégant.",
+      "formality_level": "décontracté",
+      "total_budget": 50.45,
+      "items": [
+        {
+          "name": "pantalon de lin beige",
+          "category": "pantalon",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "REGULAR FIT TEXTURED - Pantalon classique - neutral",
+            "brand": "Next",
+            "price": 22.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-regular-fit-textured-pantalon-classique-neutral-nx322e197-b11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/e1924401ae384c7fa3fb703ccfc7751c/81a62e3b013442d59b371143d41b5068.jpg?imwidth=200",
+            "sku": "NX322E197-B11",
+            "color": "neutral/beige"
+          }
+        },
+        {
+          "name": "t-shirt gris",
+          "category": "t-shirt",
+          "max_price": 35.0,
+          "chosen_product": {
+            "name": "AKILO - T-shirt basique - gris chiné",
+            "brand": "Lee Cooper",
+            "price": 12.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/lee-cooper-akilo-t-shirt-basique-gris-chine-1le22o0dg-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/d9358852d59744648d369e7c884fa20a/1b7b71007031440689aa1ef59966ff19.jpg?imwidth=200",
+            "sku": "1LE22O0DG-C11",
+            "color": "gris chiné"
+          }
+        },
+        {
+          "name": "sandalles",
+          "category": "chaussures",
+          "max_price": 55.0,
+          "chosen_product": {
+            "name": "FLIP FLOPS - Mules - naval blue",
+            "brand": "Pepe Jeans",
+            "price": 16.45,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pepe-jeans-flip-flops-sandales-de-bain-naval-blue-pe112g030-k11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/ae123ce5b3154c6f8d2e8880a2300c30/4612fe78a49f4ef39acf33714c889b20.jpg?imwidth=200&filter=packshot",
+            "sku": "PE112G030-K11",
+            "color": "naval blue/bleu"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/91949345-2f48-45bc-aa01-9878e0b904d9.png",
+      "preview_prompt": "Keep the person from the first image as the base, and dress them in a minimalist outfit inspired by the other images. The look should include a beige linen pants, a grey t-shirt, and navy blue sandals, for a relaxed yet elegant appearance. The first image is the base person, and the other images are clothing references only, ignore the mannequins and focus on the clothing items. Ensure the overall style is minimalist and the formality level is casual, suitable for a beach event. The person should be a 25-year-old man with a clean and simple look, avoiding any mix of faces or bodies from the clothing reference images."
+    }
+  ]
+}

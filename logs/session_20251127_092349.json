@@ -1,0 +1,489 @@
+{
+  "event": {
+    "event_type": "mariage",
+    "time_of_day": "soirée",
+    "formality_level": "chic",
+    "style": "classique, élégant",
+    "budget": 150.0,
+    "gender": "homme",
+    "age": 30
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Élégance Classique",
+        "description": "Costume noir classique avec chemise blanche et cravate noire pour un look élégant et chic.",
+        "formality_level": "chic",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "costume noir",
+            "category": "costume",
+            "max_price": 80.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0
+          },
+          {
+            "name": "cravate noire",
+            "category": "accessoire",
+            "max_price": 20.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 20.0
+          }
+        ]
+      },
+      {
+        "style_name": "Sophistication Élégante",
+        "description": "Costume gris foncé avec chemise blanche et cravate grise pour un look raffiné et élégant.",
+        "formality_level": "chic",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "costume gris foncé",
+            "category": "costume",
+            "max_price": 90.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 25.0
+          },
+          {
+            "name": "cravate grise",
+            "category": "accessoire",
+            "max_price": 15.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 20.0
+          }
+        ]
+      },
+      {
+        "style_name": "Élégance Moderne",
+        "description": "Costume bleu marine avec chemise blanche et cravate bleu clair pour un look moderne et élégant.",
+        "formality_level": "chic",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "costume bleu marine",
+            "category": "costume",
+            "max_price": 80.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 25.0
+          },
+          {
+            "name": "cravate bleu clair",
+            "category": "accessoire",
+            "max_price": 20.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 25.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Élégance Classique",
+        "description": "Costume noir classique avec chemise blanche et cravate noire pour un look élégant et chic.",
+        "formality_level": "chic",
+        "total_budget": 98.23,
+        "items": [
+          {
+            "name": "costume noir",
+            "category": "costume",
+            "max_price": 80.0,
+            "chosen_product": {
+              "name": "SEQUINS - Veste de costume - black",
+              "brand": "Suitmeister",
+              "price": 44.95,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/suitmeister-blazer-black-suv22t007-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/623882b213b9430fa92134beaa7d4dda/67255d2b0e334f179f5374f3afe07c84.jpg?imwidth=200",
+              "sku": "SUV22T007-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "Chemise - white",
+              "brand": "Next",
+              "price": 22.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-chemise-white-nx322d234-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/4982d4af447b4356ae0d186194a5ffee/83b6f32933bb4a22b11233f9f2553de7.jpg?imwidth=200",
+              "sku": "NX322D234-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "cravate noire",
+            "category": "accessoire",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "Cravate - black",
+              "brand": "Pier One",
+              "price": 11.29,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-cravate-black-pi952r01s-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/a1efb218fdb63b0c96a27db61c43ab9c/cce7aa8b129040a28079f1892f2e4133.jpg?imwidth=200&filter=packshot",
+              "sku": "PI952R01S-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "Derbies - black",
+              "brand": "Pier One",
+              "price": 19.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-derbies-black-pi912c0ga-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/a022e3ccd7b24f88b05a8e06266caa28/01ac9115812c4ee5a371ea0c76d44869.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912C0GA-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Sophistication Élégante",
+        "description": "Costume gris foncé avec chemise blanche et cravate grise pour un look raffiné et élégant.",
+        "formality_level": "chic",
+        "total_budget": 75.33,
+        "items": [
+          {
+            "name": "costume gris foncé",
+            "category": "costume",
+            "max_price": 90.0,
+            "chosen_product": {
+              "name": "TAILORED FIT TWO BUTTON - Veste de costume - grey",
+              "brand": "Next",
+              "price": 43.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-blazer-grey-nx322t0hh-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/a9ffbbadaaf531b8b8993c3597705bc3/68e151b67d2d490093a0639045dbbaf0.jpg?imwidth=200",
+              "sku": "NX322T0HH-C11",
+              "color": "grey/gris"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 25.0,
+            "chosen_product": {
+              "name": "KLASSISCHES - Chemise classique - white",
+              "brand": "Only & Sons",
+              "price": 20.29,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+              "sku": "OS322D086-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "cravate grise",
+            "category": "accessoire",
+            "max_price": 15.0,
+            "chosen_product": {
+              "name": "Cravate - blue",
+              "brand": "Pier One",
+              "price": 12.04,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-cravate-blue-pi952f01r-k11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/1d934627e10b4a7db0be20d9b89649e6/ef0071a1cadf4f0987a0d245242b8ed3.jpg?imwidth=200&filter=packshot",
+              "sku": "PI952F01R-K11",
+              "color": "blue/bleu"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Élégance Moderne",
+        "description": "Costume bleu marine avec chemise blanche et cravate bleu clair pour un look moderne et élégant.",
+        "formality_level": "chic",
+        "total_budget": 91.56,
+        "items": [
+          {
+            "name": "costume bleu marine",
+            "category": "costume",
+            "max_price": 80.0,
+            "chosen_product": {
+              "name": "M&M FORMAL BLAZER - Veste de costume - dark blue",
+              "brand": "Pier One",
+              "price": 39.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-formal-blazer-dark-blue-pi922a03c-k11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/027b75e435484099a1f017e0f830b7bc/4a8a09cd5d4346b48954f766a530e2cf.jpg?imwidth=200",
+              "sku": "PI922A03C-K11",
+              "color": "dark blue/bleu marine"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 25.0,
+            "chosen_product": {
+              "name": "KLASSISCHES - Chemise classique - white",
+              "brand": "Only & Sons",
+              "price": 20.29,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+              "sku": "OS322D086-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "cravate bleu clair",
+            "category": "accessoire",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "Cravate - blue",
+              "brand": "Pier One",
+              "price": 11.29,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-cravate-blue-pi952r03w-k11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/3d0e026b5df847e2bb6c2bb78b716d68/d1f6b3194eac47f69198c4a09b5707f7.jpg?imwidth=200&filter=packshot",
+              "sku": "PI952R03W-K11",
+              "color": "blue/bleu"
+            }
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 25.0,
+            "chosen_product": {
+              "name": "Derbies - black",
+              "brand": "Pier One",
+              "price": 19.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-derbies-black-pi912c0ga-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/a022e3ccd7b24f88b05a8e06266caa28/01ac9115812c4ee5a371ea0c76d44869.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912C0GA-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Élégance Classique",
+      "description": "Costume noir classique avec chemise blanche et cravate noire pour un look élégant et chic.",
+      "formality_level": "chic",
+      "total_budget": 98.23,
+      "items": [
+        {
+          "name": "costume noir",
+          "category": "costume",
+          "max_price": 80.0,
+          "chosen_product": {
+            "name": "SEQUINS - Veste de costume - black",
+            "brand": "Suitmeister",
+            "price": 44.95,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/suitmeister-blazer-black-suv22t007-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/623882b213b9430fa92134beaa7d4dda/67255d2b0e334f179f5374f3afe07c84.jpg?imwidth=200",
+            "sku": "SUV22T007-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "Chemise - white",
+            "brand": "Next",
+            "price": 22.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-chemise-white-nx322d234-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/4982d4af447b4356ae0d186194a5ffee/83b6f32933bb4a22b11233f9f2553de7.jpg?imwidth=200",
+            "sku": "NX322D234-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "cravate noire",
+          "category": "accessoire",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "Cravate - black",
+            "brand": "Pier One",
+            "price": 11.29,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-cravate-black-pi952r01s-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/a1efb218fdb63b0c96a27db61c43ab9c/cce7aa8b129040a28079f1892f2e4133.jpg?imwidth=200&filter=packshot",
+            "sku": "PI952R01S-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chaussures noires",
+          "category": "chaussures",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "Derbies - black",
+            "brand": "Pier One",
+            "price": 19.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-derbies-black-pi912c0ga-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/a022e3ccd7b24f88b05a8e06266caa28/01ac9115812c4ee5a371ea0c76d44869.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912C0GA-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/15d60305-20e1-4b17-a65d-f173053a3bbd.png",
+      "preview_prompt": "The first image is the base person. The other images are clothing references only, ignore the mannequins and focus on the clothes. Dress the person from the first image in a classic, elegant outfit inspired by the provided clothing references: a black suit, a white shirt, a black tie, and black shoes, aiming for a chic and sophisticated look suitable for a wedding evening, with a classic and elegant style, and minimal accessories, keeping the person's face, skin tone, and body morphology intact."
+    },
+    {
+      "style_name": "Sophistication Élégante",
+      "description": "Costume gris foncé avec chemise blanche et cravate grise pour un look raffiné et élégant.",
+      "formality_level": "chic",
+      "total_budget": 75.33,
+      "items": [
+        {
+          "name": "costume gris foncé",
+          "category": "costume",
+          "max_price": 90.0,
+          "chosen_product": {
+            "name": "TAILORED FIT TWO BUTTON - Veste de costume - grey",
+            "brand": "Next",
+            "price": 43.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-blazer-grey-nx322t0hh-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/a9ffbbadaaf531b8b8993c3597705bc3/68e151b67d2d490093a0639045dbbaf0.jpg?imwidth=200",
+            "sku": "NX322T0HH-C11",
+            "color": "grey/gris"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 25.0,
+          "chosen_product": {
+            "name": "KLASSISCHES - Chemise classique - white",
+            "brand": "Only & Sons",
+            "price": 20.29,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+            "sku": "OS322D086-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "cravate grise",
+          "category": "accessoire",
+          "max_price": 15.0,
+          "chosen_product": {
+            "name": "Cravate - blue",
+            "brand": "Pier One",
+            "price": 12.04,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-cravate-blue-pi952f01r-k11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/1d934627e10b4a7db0be20d9b89649e6/ef0071a1cadf4f0987a0d245242b8ed3.jpg?imwidth=200&filter=packshot",
+            "sku": "PI952F01R-K11",
+            "color": "blue/bleu"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/c614ad11-50b3-4332-bf37-dde05a038b01.png",
+      "preview_prompt": "Keep the person from the first image as the base, and use the other images as references for the clothing only, ignoring the mannequins. Dress the person in a sophisticated outfit consisting of a dark grey suit, a white shirt, and a grey tie, aiming for a classic and elegant look suitable for a chic evening wedding. Ensure the overall style is refined and elegant, with a focus on sophistication. The first image is the base person, and the other images are clothing references only."
+    },
+    {
+      "style_name": "Élégance Moderne",
+      "description": "Costume bleu marine avec chemise blanche et cravate bleu clair pour un look moderne et élégant.",
+      "formality_level": "chic",
+      "total_budget": 91.56,
+      "items": [
+        {
+          "name": "costume bleu marine",
+          "category": "costume",
+          "max_price": 80.0,
+          "chosen_product": {
+            "name": "M&M FORMAL BLAZER - Veste de costume - dark blue",
+            "brand": "Pier One",
+            "price": 39.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-formal-blazer-dark-blue-pi922a03c-k11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/027b75e435484099a1f017e0f830b7bc/4a8a09cd5d4346b48954f766a530e2cf.jpg?imwidth=200",
+            "sku": "PI922A03C-K11",
+            "color": "dark blue/bleu marine"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 25.0,
+          "chosen_product": {
+            "name": "KLASSISCHES - Chemise classique - white",
+            "brand": "Only & Sons",
+            "price": 20.29,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+            "sku": "OS322D086-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "cravate bleu clair",
+          "category": "accessoire",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "Cravate - blue",
+            "brand": "Pier One",
+            "price": 11.29,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-cravate-blue-pi952r03w-k11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/3d0e026b5df847e2bb6c2bb78b716d68/d1f6b3194eac47f69198c4a09b5707f7.jpg?imwidth=200&filter=packshot",
+            "sku": "PI952R03W-K11",
+            "color": "blue/bleu"
+          }
+        },
+        {
+          "name": "chaussures noires",
+          "category": "chaussures",
+          "max_price": 25.0,
+          "chosen_product": {
+            "name": "Derbies - black",
+            "brand": "Pier One",
+            "price": 19.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-derbies-black-pi912c0ga-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/a022e3ccd7b24f88b05a8e06266caa28/01ac9115812c4ee5a371ea0c76d44869.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912C0GA-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/8d7bdab9-e2b6-49c7-b460-c3c5df285101.png",
+      "preview_prompt": "The first image is the base person. The other images are clothing references only. Keep the person from the first image as the base and dress them in a navy blue suit, white shirt, light blue tie, and black shoes, inspired by the provided clothing images. The style should be classic and elegant, suitable for a chic evening wedding. Ensure the overall look is modern and elegant, with a focus on clean lines and minimal accessories. Avoid mixing the faces or bodies of the models from the clothing images."
+    }
+  ]
+}

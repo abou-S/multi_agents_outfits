@@ -1,0 +1,414 @@
+{
+  "event": {
+    "event_type": "autre",
+    "time_of_day": "non précisé",
+    "formality_level": "décontracté",
+    "style": "hip-hop, streetwear",
+    "budget": 150.0,
+    "gender": "homme",
+    "age": 30
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Streetwear décontracté",
+        "description": "Tenue décontractée avec un t-shirt noir, un pantalon de jogging gris et des baskets noires pour un look streetwear.",
+        "formality_level": "décontracté",
+        "total_budget": 120.0,
+        "items": [
+          {
+            "name": "t-shirt noir",
+            "category": "t-shirt",
+            "max_price": 30.0
+          },
+          {
+            "name": "pantalon de jogging gris",
+            "category": "pantalon",
+            "max_price": 40.0
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 50.0
+          }
+        ]
+      },
+      {
+        "style_name": "Hip-hop casual",
+        "description": "Tenue inspirée du hip-hop avec un sweat à capuche noir, un pantalon de streetwear noir et des baskets blanches pour un look décontracté et stylé.",
+        "formality_level": "décontracté",
+        "total_budget": 130.0,
+        "items": [
+          {
+            "name": "sweat à capuche noir",
+            "category": "sweat",
+            "max_price": 40.0
+          },
+          {
+            "name": "pantalon de streetwear noir",
+            "category": "pantalon",
+            "max_price": 50.0
+          },
+          {
+            "name": "baskets blanches",
+            "category": "chaussures",
+            "max_price": 40.0
+          }
+        ]
+      },
+      {
+        "style_name": "Streetwear chic",
+        "description": "Tenue streetwear élégante avec un blazer noir, un t-shirt blanc et des baskets noires pour un look décontracté mais stylé.",
+        "formality_level": "décontracté",
+        "total_budget": 140.0,
+        "items": [
+          {
+            "name": "blazer noir",
+            "category": "blazer",
+            "max_price": 60.0
+          },
+          {
+            "name": "t-shirt blanc",
+            "category": "t-shirt",
+            "max_price": 20.0
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 60.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Streetwear décontracté",
+        "description": "Tenue décontractée avec un t-shirt noir, un pantalon de jogging gris et des baskets noires pour un look streetwear.",
+        "formality_level": "décontracté",
+        "total_budget": 53.57,
+        "items": [
+          {
+            "name": "t-shirt noir",
+            "category": "t-shirt",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "MONEY TALKS - T-shirt imprimé - black",
+              "brand": "Mister Tee",
+              "price": 10.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/mister-tee-t-shirt-imprime-black-m0m22o1iq-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/40588381ba0f4a5092d821aca1ac3fa6/d7a8ea7da6e647ca8cf17cb9bbb5515d.jpg?imwidth=200",
+              "sku": "M0M22O1IQ-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "pantalon de jogging gris",
+            "category": "pantalon",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "Pantalon de survêtement - heathergrey",
+              "brand": "Urban Classics",
+              "price": 19.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/urban-classics-pantalon-de-survetement-heathergrey-ur622e08y-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/3f0e00ddbb7242c2bb907a5d7cb2a800/1354139af5a54ceb9edd996ff14ebf6b.jpg?imwidth=200",
+              "sku": "UR622E08Y-C11",
+              "color": "heathergrey/gris"
+            }
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "UNISEX - Baskets basses - black",
+              "brand": "YOURTURN",
+              "price": 22.59,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/yourturn-unisex-baskets-basses-black-yo115p00d-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/17164a24422e4d8ab6e5295521262b8b/7fb67b514ba04b9c88e9a9eb5c178190.jpg?imwidth=200&filter=packshot",
+              "sku": "YO115P00D-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Hip-hop casual",
+        "description": "Tenue inspirée du hip-hop avec un sweat à capuche noir, un pantalon de streetwear noir et des baskets blanches pour un look décontracté et stylé.",
+        "formality_level": "décontracté",
+        "total_budget": 66.39,
+        "items": [
+          {
+            "name": "sweat à capuche noir",
+            "category": "sweat",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "BHABRAHAM BIG & TALL - T-shirt imprimé - bluestone",
+              "brand": "Blend",
+              "price": 8.65,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/blend-bhbabraham-t-shirt-imprime-bluestone-bl522o0fl-k11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/af954c97dc4743888b78153d62fa8215/ccb6ffc2bc644b34b67f1b0d5857fb2a.jpg?imwidth=200",
+              "sku": "BL522O0FL-K11",
+              "color": "bluestone/bleu"
+            }
+          },
+          {
+            "name": "pantalon de streetwear noir",
+            "category": "pantalon",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "BAGGY - Pantalon de survêtement - black",
+              "brand": "adidas Originals",
+              "price": 36.95,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/adidas-originals-pantalon-de-survetement-black-ad122e0jv-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/1c671174d1294d12890fcd0e8abea129/dfe487f786444896bc0c0cb9d1266bd7.jpg?imwidth=200",
+              "sku": "AD122E0JV-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "baskets blanches",
+            "category": "chaussures",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "CHUNKY  - Baskets basses - white",
+              "brand": "PULL&BEAR",
+              "price": 20.79,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pullandbear-chunky-baskets-basses-white-puc12p00s-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/4c7d8dc39cb042e18516b741723d4ea7/795cccc213c24c4d92cda976a0be36b2.jpg?imwidth=200&filter=packshot",
+              "sku": "PUC12P00S-A11",
+              "color": "white/blanc"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Streetwear chic",
+        "description": "Tenue streetwear élégante avec un blazer noir, un t-shirt blanc et des baskets noires pour un look décontracté mais stylé.",
+        "formality_level": "décontracté",
+        "total_budget": 71.89,
+        "items": [
+          {
+            "name": "blazer noir",
+            "category": "blazer",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "BANKS - Veste légère - black",
+              "brand": "Redefined Rebel",
+              "price": 29.95,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/redefined-rebel-banks-veste-legere-black-r0622t05r-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/101e71e178654491baa123dbeedcd5c6/662cd4d475194d29ae86caf328497b9d.jpg?imwidth=200",
+              "sku": "R0622T05R-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "t-shirt blanc",
+            "category": "t-shirt",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "SKELETT PATCH - T-shirt imprimé - white",
+              "brand": "Mister Tee",
+              "price": 11.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/mister-tee-t-shirt-imprime-white-m0m22o19g-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/fba2f82682314538b592b444a72c8987/2bf4a15c355d4cd3805d82cced85e4e4.jpg?imwidth=200",
+              "sku": "M0M22O19G-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "LUKA MEN LOW - Baskets basses - triple black",
+              "brand": "Lee",
+              "price": 29.95,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/lee-luka-men-low-baskets-basses-triple-black-le412p00c-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f4cc94bfaa5548d195c75d1e55793e14/d5efe30e65b14b6fad4eb7a6e3c7291a.jpg?imwidth=200&filter=packshot",
+              "sku": "LE412P00C-Q11",
+              "color": "triple black/noir"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Streetwear décontracté",
+      "description": "Tenue décontractée avec un t-shirt noir, un pantalon de jogging gris et des baskets noires pour un look streetwear.",
+      "formality_level": "décontracté",
+      "total_budget": 53.57,
+      "items": [
+        {
+          "name": "t-shirt noir",
+          "category": "t-shirt",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "MONEY TALKS - T-shirt imprimé - black",
+            "brand": "Mister Tee",
+            "price": 10.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/mister-tee-t-shirt-imprime-black-m0m22o1iq-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/40588381ba0f4a5092d821aca1ac3fa6/d7a8ea7da6e647ca8cf17cb9bbb5515d.jpg?imwidth=200",
+            "sku": "M0M22O1IQ-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "pantalon de jogging gris",
+          "category": "pantalon",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "Pantalon de survêtement - heathergrey",
+            "brand": "Urban Classics",
+            "price": 19.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/urban-classics-pantalon-de-survetement-heathergrey-ur622e08y-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/3f0e00ddbb7242c2bb907a5d7cb2a800/1354139af5a54ceb9edd996ff14ebf6b.jpg?imwidth=200",
+            "sku": "UR622E08Y-C11",
+            "color": "heathergrey/gris"
+          }
+        },
+        {
+          "name": "baskets noires",
+          "category": "chaussures",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "UNISEX - Baskets basses - black",
+            "brand": "YOURTURN",
+            "price": 22.59,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/yourturn-unisex-baskets-basses-black-yo115p00d-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/17164a24422e4d8ab6e5295521262b8b/7fb67b514ba04b9c88e9a9eb5c178190.jpg?imwidth=200&filter=packshot",
+            "sku": "YO115P00D-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/ab94a6f3-76ac-4b5b-890c-ec909a8c969c.png",
+      "preview_prompt": "Use the first image as the base person and keep their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and focus on the clothes. Dress the base person in a black t-shirt, heather grey jogger pants, and black sneakers for a relaxed streetwear look. Ensure the overall style is hip-hop and streetwear-inspired, with a casual formality level. Accessorize minimally to maintain a clean and simple appearance. The resulting image should showcase the base person wearing the described outfit, blending the clothing items from the reference images with their own likeness."
+    },
+    {
+      "style_name": "Hip-hop casual",
+      "description": "Tenue inspirée du hip-hop avec un sweat à capuche noir, un pantalon de streetwear noir et des baskets blanches pour un look décontracté et stylé.",
+      "formality_level": "décontracté",
+      "total_budget": 66.39,
+      "items": [
+        {
+          "name": "sweat à capuche noir",
+          "category": "sweat",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "BHABRAHAM BIG & TALL - T-shirt imprimé - bluestone",
+            "brand": "Blend",
+            "price": 8.65,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/blend-bhbabraham-t-shirt-imprime-bluestone-bl522o0fl-k11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/af954c97dc4743888b78153d62fa8215/ccb6ffc2bc644b34b67f1b0d5857fb2a.jpg?imwidth=200",
+            "sku": "BL522O0FL-K11",
+            "color": "bluestone/bleu"
+          }
+        },
+        {
+          "name": "pantalon de streetwear noir",
+          "category": "pantalon",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "BAGGY - Pantalon de survêtement - black",
+            "brand": "adidas Originals",
+            "price": 36.95,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/adidas-originals-pantalon-de-survetement-black-ad122e0jv-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/1c671174d1294d12890fcd0e8abea129/dfe487f786444896bc0c0cb9d1266bd7.jpg?imwidth=200",
+            "sku": "AD122E0JV-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "baskets blanches",
+          "category": "chaussures",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "CHUNKY  - Baskets basses - white",
+            "brand": "PULL&BEAR",
+            "price": 20.79,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pullandbear-chunky-baskets-basses-white-puc12p00s-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/4c7d8dc39cb042e18516b741723d4ea7/795cccc213c24c4d92cda976a0be36b2.jpg?imwidth=200&filter=packshot",
+            "sku": "PUC12P00S-A11",
+            "color": "white/blanc"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/681ab916-8e7f-44d3-bb8c-d1616125ed62.png",
+      "preview_prompt": "Use the first image as the base person and keep their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and focus on the clothes. Dress the person in a hip-hop, streetwear-inspired outfit, consisting of a black hoodie, black streetwear pants, and clean white sneakers. The overall look should be casual and stylish, with a focus on comfort and streetwear aesthetics. Ensure the outfit is cohesive and respectful of the hip-hop style, with minimal accessories. The event is casual, so prioritize a relaxed and trendy vibe."
+    },
+    {
+      "style_name": "Streetwear chic",
+      "description": "Tenue streetwear élégante avec un blazer noir, un t-shirt blanc et des baskets noires pour un look décontracté mais stylé.",
+      "formality_level": "décontracté",
+      "total_budget": 71.89,
+      "items": [
+        {
+          "name": "blazer noir",
+          "category": "blazer",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "BANKS - Veste légère - black",
+            "brand": "Redefined Rebel",
+            "price": 29.95,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/redefined-rebel-banks-veste-legere-black-r0622t05r-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/101e71e178654491baa123dbeedcd5c6/662cd4d475194d29ae86caf328497b9d.jpg?imwidth=200",
+            "sku": "R0622T05R-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "t-shirt blanc",
+          "category": "t-shirt",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "SKELETT PATCH - T-shirt imprimé - white",
+            "brand": "Mister Tee",
+            "price": 11.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/mister-tee-t-shirt-imprime-white-m0m22o19g-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/fba2f82682314538b592b444a72c8987/2bf4a15c355d4cd3805d82cced85e4e4.jpg?imwidth=200",
+            "sku": "M0M22O19G-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "baskets noires",
+          "category": "chaussures",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "LUKA MEN LOW - Baskets basses - triple black",
+            "brand": "Lee",
+            "price": 29.95,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/lee-luka-men-low-baskets-basses-triple-black-le412p00c-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f4cc94bfaa5548d195c75d1e55793e14/d5efe30e65b14b6fad4eb7a6e3c7291a.jpg?imwidth=200&filter=packshot",
+            "sku": "LE412P00C-Q11",
+            "color": "triple black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/c68189cf-1986-4cf0-82f1-fb000d90380f.png",
+      "preview_prompt": "Use the first image as the base person and keep their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and focus on the garments. Dress the base person in a black blazer, a white t-shirt, and triple black sneakers for a relaxed yet stylish streetwear look, inspired by hip-hop and streetwear styles. Ensure the overall appearance is casual, with a focus on streetwear chic, and avoid mixing the faces or bodies of the mannequins from the product images."
+    }
+  ]
+}

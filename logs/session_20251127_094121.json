@@ -1,0 +1,283 @@
+{
+  "event": {
+    "event_type": "rendez-vous",
+    "time_of_day": "soirée",
+    "formality_level": "décontracté",
+    "style": "simple, décontracté",
+    "budget": 150.0,
+    "gender": "homme",
+    "age": 30
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Décontracté Chic",
+        "description": "Chemise en coton décontractée avec un pantalon en jeans et des baskets pour un look simple mais élégant.",
+        "formality_level": "décontracté",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "chemise en coton",
+            "category": "chemise",
+            "max_price": 50.0
+          },
+          {
+            "name": "pantalon en jeans",
+            "category": "pantalon",
+            "max_price": 60.0
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 40.0
+          }
+        ]
+      },
+      {
+        "style_name": "Simple et Élégant",
+        "description": "Pull en coton avec un pantalon en toile et des chaussures décontractées pour un look décontracté mais raffiné.",
+        "formality_level": "décontracté",
+        "total_budget": 150.0,
+        "items": [
+          {
+            "name": "pull en coton",
+            "category": "pull",
+            "max_price": 40.0
+          },
+          {
+            "name": "pantalon en toile",
+            "category": "pantalon",
+            "max_price": 50.0
+          },
+          {
+            "name": "chaussures décontractées",
+            "category": "chaussures",
+            "max_price": 60.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Décontracté Chic",
+        "description": "Chemise en coton décontractée avec un pantalon en jeans et des baskets pour un look simple mais élégant.",
+        "formality_level": "décontracté",
+        "total_budget": 48.64,
+        "items": [
+          {
+            "name": "chemise en coton",
+            "category": "chemise",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "Chemise - taubengrau",
+              "brand": "QS",
+              "price": 19.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/qs-chemise-taubengrau-qs122d0hx-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/831ac4472958465eaae365492f4b1237/188741c46fb448a5a44b39578aa02412.jpg?imwidth=200",
+              "sku": "QS122D0HX-C11",
+              "color": "taubengrau/gris clair"
+            }
+          },
+          {
+            "name": "pantalon en jeans",
+            "category": "pantalon",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "ESSENTIAL STRETCH  - Jean droit - dark blue",
+              "brand": "Next",
+              "price": 20.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-essential-jean-droit-dark-blue-nx322g0m1-k18.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/20d1878c119a4f2da81b3135738302b1/5978aa532df9468d80ea0013c3b9869a.jpg?imwidth=200",
+              "sku": "NX322G0M1-K18",
+              "color": "dark blue/bleu"
+            }
+          },
+          {
+            "name": "baskets noires",
+            "category": "chaussures",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "BHABRAHAM BIG & TALL - T-shirt imprimé - black",
+              "brand": "Blend",
+              "price": 8.65,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/blend-bhbabraham-t-shirt-imprime-black-bl522o0fl-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/ffb5bb780fb343be855871a6b1160ee1/768eed049ed64f62969a38a2719c3b05.jpg?imwidth=200",
+              "sku": "BL522O0FL-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Simple et Élégant",
+        "description": "Pull en coton avec un pantalon en toile et des chaussures décontractées pour un look décontracté mais raffiné.",
+        "formality_level": "décontracté",
+        "total_budget": 33.63,
+        "items": [
+          {
+            "name": "pull en coton",
+            "category": "pull",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "BHGILA BIG & TALL - T-shirt basique - dress blues",
+              "brand": "Blend",
+              "price": 11.05,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/blend-bhbgila-t-shirt-basique-dress-blues-bl522o0fi-k11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/9de1ea5c0dd64dd8a736459724e95f8d/b447318eaafc4ac29d63b8c841c47420.jpg?imwidth=200",
+              "sku": "BL522O0FI-K11",
+              "color": "dress blues/bleu"
+            }
+          },
+          {
+            "name": "pantalon en toile",
+            "category": "pantalon",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "JPSTALEX JJCLEAN WORKER - Pantalon classique - elmwood",
+              "brand": "Jack & Jones",
+              "price": 11.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/jack-and-jones-jpstalex-jjclean-worker-pantalon-classique-elmwood-ja222e1do-o11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/600bd33ef59a416ba46666d98e23185f/82533f9d476c40c6b4f311eaba722f4b.jpg?imwidth=200",
+              "sku": "JA222E1DO-O11",
+              "color": "elmwood/marron"
+            }
+          },
+          {
+            "name": "chaussures décontractées",
+            "category": "chaussures",
+            "max_price": 60.0,
+            "chosen_product": {
+              "name": "Chaussures à lacets - brown",
+              "brand": "Pier One",
+              "price": 10.59,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-chaussures-a-lacets-brown-pi912m0fv-o11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/a87f89a3c9e343fd828612eaa2652283/d9c4b880a87d40aab10ca21afa1a7697.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912M0FV-O11",
+              "color": "brown/marron"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Décontracté Chic",
+      "description": "Chemise en coton décontractée avec un pantalon en jeans et des baskets pour un look simple mais élégant.",
+      "formality_level": "décontracté",
+      "total_budget": 48.64,
+      "items": [
+        {
+          "name": "chemise en coton",
+          "category": "chemise",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "Chemise - taubengrau",
+            "brand": "QS",
+            "price": 19.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/qs-chemise-taubengrau-qs122d0hx-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/831ac4472958465eaae365492f4b1237/188741c46fb448a5a44b39578aa02412.jpg?imwidth=200",
+            "sku": "QS122D0HX-C11",
+            "color": "taubengrau/gris clair"
+          }
+        },
+        {
+          "name": "pantalon en jeans",
+          "category": "pantalon",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "ESSENTIAL STRETCH  - Jean droit - dark blue",
+            "brand": "Next",
+            "price": 20.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-essential-jean-droit-dark-blue-nx322g0m1-k18.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/20d1878c119a4f2da81b3135738302b1/5978aa532df9468d80ea0013c3b9869a.jpg?imwidth=200",
+            "sku": "NX322G0M1-K18",
+            "color": "dark blue/bleu"
+          }
+        },
+        {
+          "name": "baskets noires",
+          "category": "chaussures",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "BHABRAHAM BIG & TALL - T-shirt imprimé - black",
+            "brand": "Blend",
+            "price": 8.65,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/blend-bhbabraham-t-shirt-imprime-black-bl522o0fl-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/ffb5bb780fb343be855871a6b1160ee1/768eed049ed64f62969a38a2719c3b05.jpg?imwidth=200",
+            "sku": "BL522O0FL-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/3f1174c9-bed1-48e2-b57b-835447d31d85.png",
+      "preview_prompt": "Use the first image as the base person and keep their face, skin tone, and body morphology. The other images are clothing references only, ignore the mannequins and focus on the garments. Dress the base person in a casual outfit consisting of a light grey cotton shirt, dark blue jeans, and black sneakers, aiming for a simple yet elegant look. Ensure the overall style is relaxed and casual, fitting for a evening rendez-vous with a low formality level. Accessorize minimally to maintain a clean and understated appearance."
+    },
+    {
+      "style_name": "Simple et Élégant",
+      "description": "Pull en coton avec un pantalon en toile et des chaussures décontractées pour un look décontracté mais raffiné.",
+      "formality_level": "décontracté",
+      "total_budget": 33.63,
+      "items": [
+        {
+          "name": "pull en coton",
+          "category": "pull",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "BHGILA BIG & TALL - T-shirt basique - dress blues",
+            "brand": "Blend",
+            "price": 11.05,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/blend-bhbgila-t-shirt-basique-dress-blues-bl522o0fi-k11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/9de1ea5c0dd64dd8a736459724e95f8d/b447318eaafc4ac29d63b8c841c47420.jpg?imwidth=200",
+            "sku": "BL522O0FI-K11",
+            "color": "dress blues/bleu"
+          }
+        },
+        {
+          "name": "pantalon en toile",
+          "category": "pantalon",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "JPSTALEX JJCLEAN WORKER - Pantalon classique - elmwood",
+            "brand": "Jack & Jones",
+            "price": 11.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/jack-and-jones-jpstalex-jjclean-worker-pantalon-classique-elmwood-ja222e1do-o11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/600bd33ef59a416ba46666d98e23185f/82533f9d476c40c6b4f311eaba722f4b.jpg?imwidth=200",
+            "sku": "JA222E1DO-O11",
+            "color": "elmwood/marron"
+          }
+        },
+        {
+          "name": "chaussures décontractées",
+          "category": "chaussures",
+          "max_price": 60.0,
+          "chosen_product": {
+            "name": "Chaussures à lacets - brown",
+            "brand": "Pier One",
+            "price": 10.59,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-chaussures-a-lacets-brown-pi912m0fv-o11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/a87f89a3c9e343fd828612eaa2652283/d9c4b880a87d40aab10ca21afa1a7697.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912M0FV-O11",
+            "color": "brown/marron"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/8fc7055a-ab22-4c53-9f41-e96f7a54d884.png",
+      "preview_prompt": "Use the first image as the base person and keep their face, skin tone, and body morphology. The other images are references for clothing items only, ignore the mannequins. Dress the person in a navy blue cotton sweater, brown trousers made of canvas, and brown casual shoes, aiming for a simple yet elegant look that is casual and refined. Ensure the overall style is relaxed and understated, fitting for a casual evening rendez-vous. Accessorize minimally to maintain a clean and effortless appearance."
+    }
+  ]
+}

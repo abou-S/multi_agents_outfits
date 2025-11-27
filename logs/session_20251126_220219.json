@@ -1,0 +1,519 @@
+{
+  "event": {
+    "event_type": "conférence",
+    "time_of_day": "matin",
+    "formality_level": "chic",
+    "style": "minimaliste, élégant",
+    "budget": 200.0,
+    "gender": "homme",
+    "age": 30
+  },
+  "stylist_output": {
+    "outfits": [
+      {
+        "style_name": "Élégance Matinale",
+        "description": "Costume gris clair minimaliste avec chemise blanche et cravate discrète pour un look élégant et professionnel.",
+        "formality_level": "chic",
+        "total_budget": 180.0,
+        "items": [
+          {
+            "name": "costume gris clair",
+            "category": "costume",
+            "max_price": 100.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0
+          },
+          {
+            "name": "cravate discrète",
+            "category": "accessoire",
+            "max_price": 20.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 30.0
+          }
+        ]
+      },
+      {
+        "style_name": "Minimaliste Chic",
+        "description": "Pantalon noir et chemise blanche avec veste grise pour un look chic et sobre.",
+        "formality_level": "chic",
+        "total_budget": 160.0,
+        "items": [
+          {
+            "name": "pantalon noir",
+            "category": "pantalon",
+            "max_price": 40.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0
+          },
+          {
+            "name": "veste grise",
+            "category": "veste",
+            "max_price": 50.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 40.0
+          }
+        ]
+      },
+      {
+        "style_name": "Élégant et Simple",
+        "description": "Costume noir avec chemise blanche et nœud papillon pour un look élégant et raffiné.",
+        "formality_level": "chic",
+        "total_budget": 200.0,
+        "items": [
+          {
+            "name": "costume noir",
+            "category": "costume",
+            "max_price": 120.0
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0
+          },
+          {
+            "name": "nœud papillon",
+            "category": "accessoire",
+            "max_price": 20.0
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 30.0
+          }
+        ]
+      }
+    ]
+  },
+  "product_search_output": {
+    "outfits": [
+      {
+        "style_name": "Élégance Matinale",
+        "description": "Costume gris clair minimaliste avec chemise blanche et cravate discrète pour un look élégant et professionnel.",
+        "formality_level": "chic",
+        "total_budget": 97.92,
+        "items": [
+          {
+            "name": "costume gris clair",
+            "category": "costume",
+            "max_price": 100.0,
+            "chosen_product": {
+              "name": "TAILORED FIT TWO BUTTON - Veste de costume - grey",
+              "brand": "Next",
+              "price": 43.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-blazer-grey-nx322t0hh-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/a9ffbbadaaf531b8b8993c3597705bc3/68e151b67d2d490093a0639045dbbaf0.jpg?imwidth=200",
+              "sku": "NX322T0HH-C11",
+              "color": "grey/gris"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "KLASSISCHES - Chemise classique - white",
+              "brand": "Only & Sons",
+              "price": 20.29,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+              "sku": "OS322D086-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "cravate discrète",
+            "category": "accessoire",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "JACSOLID - Cravate - black",
+              "brand": "Jack & Jones",
+              "price": 12.04,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/jack-and-jones-jacsolid-cravate-black-ja254s006-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/8f966e11ccdc4093b4db7a238087a42e/1819a2fe3ffa47efb4a2a9fd33e57a81.jpg?imwidth=200",
+              "sku": "JA254S006-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "Derbies & Richelieus - black",
+              "brand": "Pier One",
+              "price": 22.59,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0fw-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/b58f84756ffd4722bd504575f8b25675/6ce0bbdf29694b6480a127716fe3fa75.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912C0FW-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Minimaliste Chic",
+        "description": "Pantalon noir et chemise blanche avec veste grise pour un look chic et sobre.",
+        "formality_level": "chic",
+        "total_budget": 94.87,
+        "items": [
+          {
+            "name": "pantalon noir",
+            "category": "pantalon",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "FORMAL TROUSERS - Pantalon classique - black",
+              "brand": "Pier One",
+              "price": 19.99,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-pantalon-de-costume-black-pi922e057-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/7deb53f18b30471d9e2a8203234fdccf/8e326cf6ac3a4c6cb9bd5283ad8def54.jpg?imwidth=200",
+              "sku": "PI922E057-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "KLASSISCHES - Chemise classique - white",
+              "brand": "Only & Sons",
+              "price": 20.29,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+              "sku": "OS322D086-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "veste grise",
+            "category": "veste",
+            "max_price": 50.0,
+            "chosen_product": {
+              "name": "REGULAR FIT-DOGTOOTH - Veste légère - grey",
+              "brand": "Next",
+              "price": 32.0,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/next-sweat-zippe-grey-nx322s0ic-c11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/6909b673e3a040dd96eb285c0d230670/7424342fb81e4e39aeec8e36b018fc57.jpg?imwidth=200",
+              "sku": "NX322S0IC-C11",
+              "color": "grey/gris"
+            }
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 40.0,
+            "chosen_product": {
+              "name": "Derbies & Richelieus - black",
+              "brand": "Pier One",
+              "price": 22.59,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0fw-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/b58f84756ffd4722bd504575f8b25675/6ce0bbdf29694b6480a127716fe3fa75.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912C0FW-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      },
+      {
+        "style_name": "Élégant et Simple",
+        "description": "Costume noir avec chemise blanche et nœud papillon pour un look élégant et raffiné.",
+        "formality_level": "chic",
+        "total_budget": 115.17,
+        "items": [
+          {
+            "name": "costume noir",
+            "category": "costume",
+            "max_price": 120.0,
+            "chosen_product": {
+              "name": "SOREN - Veste de costume - black",
+              "brand": "Isaac Dewhirst",
+              "price": 59.95,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/isaac-dewhirst-soren-veste-de-costume-black-dh022a0fo-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/56b50710afb749509c4cc54971de3c71/4b7749d4773b48c9adb3134ca6032600.jpg?imwidth=200",
+              "sku": "DH022A0FO-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chemise blanche",
+            "category": "chemise",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "LONG SLEEVE MUSCLE FIT OXFORD - Chemise - white",
+              "brand": "New Look",
+              "price": 22.19,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/new-look-chemise-white-nl022d08g-a11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/ddf461580cb146cbb562e215fcba73da/9c416c91c5b34012931d795484d8e491.jpg?imwidth=200",
+              "sku": "NL022D08G-A11",
+              "color": "white/blanc"
+            }
+          },
+          {
+            "name": "nœud papillon",
+            "category": "accessoire",
+            "max_price": 20.0,
+            "chosen_product": {
+              "name": "Noeud papillon - black",
+              "brand": "Pier One",
+              "price": 10.44,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-noeud-papillon-black-pi952r03r-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/d7c8b57837d24fd99238cea92789703c/666d32c8594f4ac0ac284f3ccbbb4228.jpg?imwidth=200&filter=packshot",
+              "sku": "PI952R03R-Q11",
+              "color": "black/noir"
+            }
+          },
+          {
+            "name": "chaussures noires",
+            "category": "chaussures",
+            "max_price": 30.0,
+            "chosen_product": {
+              "name": "Derbies & Richelieus - black",
+              "brand": "Pier One",
+              "price": 22.59,
+              "currency": "EUR",
+              "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0fw-q11.html",
+              "image": "https://img01.ztat.net/article/spp-media-p1/b58f84756ffd4722bd504575f8b25675/6ce0bbdf29694b6480a127716fe3fa75.jpg?imwidth=200&filter=packshot",
+              "sku": "PI912C0FW-Q11",
+              "color": "black/noir"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "final_outfits": [
+    {
+      "style_name": "Élégance Matinale",
+      "description": "Costume gris clair minimaliste avec chemise blanche et cravate discrète pour un look élégant et professionnel.",
+      "formality_level": "chic",
+      "total_budget": 97.92,
+      "items": [
+        {
+          "name": "costume gris clair",
+          "category": "costume",
+          "max_price": 100.0,
+          "chosen_product": {
+            "name": "TAILORED FIT TWO BUTTON - Veste de costume - grey",
+            "brand": "Next",
+            "price": 43.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-blazer-grey-nx322t0hh-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/a9ffbbadaaf531b8b8993c3597705bc3/68e151b67d2d490093a0639045dbbaf0.jpg?imwidth=200",
+            "sku": "NX322T0HH-C11",
+            "color": "grey/gris"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "KLASSISCHES - Chemise classique - white",
+            "brand": "Only & Sons",
+            "price": 20.29,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+            "sku": "OS322D086-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "cravate discrète",
+          "category": "accessoire",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "JACSOLID - Cravate - black",
+            "brand": "Jack & Jones",
+            "price": 12.04,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/jack-and-jones-jacsolid-cravate-black-ja254s006-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/8f966e11ccdc4093b4db7a238087a42e/1819a2fe3ffa47efb4a2a9fd33e57a81.jpg?imwidth=200",
+            "sku": "JA254S006-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chaussures noires",
+          "category": "chaussures",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "Derbies & Richelieus - black",
+            "brand": "Pier One",
+            "price": 22.59,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0fw-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/b58f84756ffd4722bd504575f8b25675/6ce0bbdf29694b6480a127716fe3fa75.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912C0FW-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/95ecd313-1404-4ec1-b06b-5bdda592a21b.png",
+      "preview_prompt": "Keep the person from the first image as the base, using the other images as clothing references only. Dress the person in a minimalist and elegant outfit, consisting of a light grey suit, a white shirt, a discreet black tie, and black shoes, inspired by the provided clothing images. Ensure the overall look is chic and professional, suitable for a morning conference event, while maintaining the person's original face, skin tone, and body morphology, and avoiding any mix of the models' faces or bodies from the clothing images."
+    },
+    {
+      "style_name": "Minimaliste Chic",
+      "description": "Pantalon noir et chemise blanche avec veste grise pour un look chic et sobre.",
+      "formality_level": "chic",
+      "total_budget": 94.87,
+      "items": [
+        {
+          "name": "pantalon noir",
+          "category": "pantalon",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "FORMAL TROUSERS - Pantalon classique - black",
+            "brand": "Pier One",
+            "price": 19.99,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-pantalon-de-costume-black-pi922e057-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/7deb53f18b30471d9e2a8203234fdccf/8e326cf6ac3a4c6cb9bd5283ad8def54.jpg?imwidth=200",
+            "sku": "PI922E057-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "KLASSISCHES - Chemise classique - white",
+            "brand": "Only & Sons",
+            "price": 20.29,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/only-and-sons-klassisches-chemise-classique-white-os322d086-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/f0c4c167163f37c3a8daa58b92d6b03d/206aab6f5c674211801501a2dbd168d1.jpg?imwidth=200",
+            "sku": "OS322D086-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "veste grise",
+          "category": "veste",
+          "max_price": 50.0,
+          "chosen_product": {
+            "name": "REGULAR FIT-DOGTOOTH - Veste légère - grey",
+            "brand": "Next",
+            "price": 32.0,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/next-sweat-zippe-grey-nx322s0ic-c11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/6909b673e3a040dd96eb285c0d230670/7424342fb81e4e39aeec8e36b018fc57.jpg?imwidth=200",
+            "sku": "NX322S0IC-C11",
+            "color": "grey/gris"
+          }
+        },
+        {
+          "name": "chaussures noires",
+          "category": "chaussures",
+          "max_price": 40.0,
+          "chosen_product": {
+            "name": "Derbies & Richelieus - black",
+            "brand": "Pier One",
+            "price": 22.59,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0fw-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/b58f84756ffd4722bd504575f8b25675/6ce0bbdf29694b6480a127716fe3fa75.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912C0FW-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/b1676390-0541-4c9b-8beb-8d0f21b02505.png",
+      "preview_prompt": "The first image is the base person. The other images are clothing references only. Keep the person from the first image as the base and dress them in a minimalist chic outfit inspired by the provided clothing images. The look should include a black pant, a white shirt, a grey jacket, and black shoes, for a chic and elegant appearance. Ensure the style is minimalist and elegant, suitable for a conference in the morning with a high level of formality. Avoid mixing the faces or bodies of the mannequins from the clothing images. The overall look should be navy-free, focusing on black, white, and grey tones for a clean and sophisticated appearance."
+    },
+    {
+      "style_name": "Élégant et Simple",
+      "description": "Costume noir avec chemise blanche et nœud papillon pour un look élégant et raffiné.",
+      "formality_level": "chic",
+      "total_budget": 115.17,
+      "items": [
+        {
+          "name": "costume noir",
+          "category": "costume",
+          "max_price": 120.0,
+          "chosen_product": {
+            "name": "SOREN - Veste de costume - black",
+            "brand": "Isaac Dewhirst",
+            "price": 59.95,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/isaac-dewhirst-soren-veste-de-costume-black-dh022a0fo-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/56b50710afb749509c4cc54971de3c71/4b7749d4773b48c9adb3134ca6032600.jpg?imwidth=200",
+            "sku": "DH022A0FO-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chemise blanche",
+          "category": "chemise",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "LONG SLEEVE MUSCLE FIT OXFORD - Chemise - white",
+            "brand": "New Look",
+            "price": 22.19,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/new-look-chemise-white-nl022d08g-a11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/ddf461580cb146cbb562e215fcba73da/9c416c91c5b34012931d795484d8e491.jpg?imwidth=200",
+            "sku": "NL022D08G-A11",
+            "color": "white/blanc"
+          }
+        },
+        {
+          "name": "nœud papillon",
+          "category": "accessoire",
+          "max_price": 20.0,
+          "chosen_product": {
+            "name": "Noeud papillon - black",
+            "brand": "Pier One",
+            "price": 10.44,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-noeud-papillon-black-pi952r03r-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/d7c8b57837d24fd99238cea92789703c/666d32c8594f4ac0ac284f3ccbbb4228.jpg?imwidth=200&filter=packshot",
+            "sku": "PI952R03R-Q11",
+            "color": "black/noir"
+          }
+        },
+        {
+          "name": "chaussures noires",
+          "category": "chaussures",
+          "max_price": 30.0,
+          "chosen_product": {
+            "name": "Derbies & Richelieus - black",
+            "brand": "Pier One",
+            "price": 22.59,
+            "currency": "EUR",
+            "url": "https://www.zalando.fr/pier-one-chaussons-black-pi912c0fw-q11.html",
+            "image": "https://img01.ztat.net/article/spp-media-p1/b58f84756ffd4722bd504575f8b25675/6ce0bbdf29694b6480a127716fe3fa75.jpg?imwidth=200&filter=packshot",
+            "sku": "PI912C0FW-Q11",
+            "color": "black/noir"
+          }
+        }
+      ],
+      "preview_image_url": "https://pub-3626123a908346a7a8be8d9295f44e26.r2.dev/generations/ce671b16-1a58-4ff9-910c-7319c0c34deb.png",
+      "preview_prompt": "Keep the person from the first image as the base, and dress them in a chic, minimalist outfit inspired by the provided clothing references. The first image is the base person, and the other images are clothing references only. Create a look with a black suit, white shirt, black bow tie, and black shoes, with a focus on elegant and refined style. Ensure the overall appearance is chic and sophisticated, suitable for a conference in the morning. Avoid mixing the faces or bodies of the mannequins from the product images."
+    }
+  ]
+}
