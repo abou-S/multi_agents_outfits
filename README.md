@@ -28,26 +28,19 @@ Installation rapide
    pip install -r requirements.txt
 
 Configuration
-- Créez un fichier `.env` à la racine (ou exportez les variables).
-- Variables requises (format .env) :
-  GROQ_API_KEY="votre_groq_api_key"
-  APIFY_API_TOKEN="votre_apify_api_token"
-  APIFY_ZALANDO_ACTOR_ID="votre_apify_zalando_actor_id"
-
-  Exemple (fichier .env) :
-  GROQ_API_KEY="sk_xxx"
-  APIFY_API_TOKEN="api_xxx"
-  APIFY_ZALANDO_ACTOR_ID="actor_xxx"
-
-  Note : adaptez les noms/valeurs si vous utilisez d'autres services ou noms d'environnement.
+- Créez un fichier `.env` à la racine (ou exportez les variables). Ne commitez jamais ce fichier.
+- Variables requises (chaque variable sur sa propre ligne) :
+```env
+GROQ_API_KEY="votre_groq_api_key
+APIFY_API_TOKEN="votre_apify_api_token"
+APIFY_ZALANDO_ACTOR_ID="votre_apify_zalando_actor_id"
+```
 
 Où sont les prompts ?
 - Les prompts systèmes se trouve dans :
   multi_agents/prompts/
 
 Exemple d'exécution:
-```streamlit run streamlit_app.py
+```bash
+streamlit run streamlit_app.py
 ```
-
-Licence / Notes
-- Ce dépôt contient un exemple et des prompts ; adaptez la logique selon votre usage.
