@@ -31,7 +31,7 @@ Configuration
 - Créez un fichier `.env` à la racine (ou exportez les variables). Ne commitez jamais ce fichier.
 - Variables requises (chaque variable sur sa propre ligne) :
 ```env
-GROQ_API_KEY="votre_groq_api_key
+GROQ_API_KEY="votre_groq_api_key"
 APIFY_API_TOKEN="votre_apify_api_token"
 APIFY_ZALANDO_ACTOR_ID="votre_apify_zalando_actor_id"
 ```
