@@ -36,6 +36,10 @@ APIFY_API_TOKEN="votre_apify_api_token"
 APIFY_ZALANDO_ACTOR_ID="votre_apify_zalando_actor_id"
 ```
 
+- Où obtenir ces clés :
+  - APIFY (token et actor id Zalando) : https://apify.com/saswave/zalando-scraper
+  - GROQ (clé API) : https://groq.com/
+
 Où sont les prompts ?
 - Les prompts systèmes se trouve dans :
   multi_agents/prompts/
