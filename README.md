@@ -1,89 +1,53 @@
-# multi_agents_outfits
+# MyOutfit
+Description
+- MyOutfit est un système multi-agent qui aide les personnes sans idée de tenue à préparer une tenue pour un événement (ex. mariage, sortie, soirée).
+- L'utilisateur peut décrire sa demande par écrit ou par message vocal, en précisant son budget.
+- Le multi-agent propose des idées de tenues adaptées au contexte et au budget, liste les articles avec références (liens ou identifiants) et fournit pour chaque tenue une image du mannequin (photo de la personne) portant la tenue afin de visualiser le rendu.
+- L'objectif : proposer des looks simples, respectant le budget, avec les références produit pour faciliter l'achat.
 
-Ce dépôt contient un petit projet d'analyse d'événements vestimentaires et des prompts destinés à un modèle LLM.
+Capture d'écran
+- Voici un aperçu de l'application.
 
-Contenu confirmé (racine du dépôt)
-- requirements.txt
-- multi_agents/  
-  - prompts/event_analyzer_system.txt  (prompt système utilisé pour l'analyse d'événements)
+![MyOutfit - capture d'écran](assets/Screenshot-MyOutfit.png)
 
-But de ce projet
-- Fournir un prompt et une logique (à implémenter) pour convertir des descriptions d'événements en un JSON structuré pour guider le choix vestimentaire.
-- Fournir un point de départ pour exécuter une requête LLM en local.
-
-1. Prérequis
+Prérequis
 - Python 3.8+
-- Une clé OpenAI (ou autre clé pour l'API LLM que vous utilisez)
-- Git (optionnel)
+- Clé API Groq (ou autre LLM compatible) dans la variable d'environnement `GROQ_API_KEY`
+- Dépendances : pip install -r requirements.txt
 
-2. Installation
-1) Créer et activer un environnement virtuel :
-   - Linux / macOS:
-     - python -m venv .venv
-     - source .venv/bin/activate
+Installation rapide
+1. Créez et activez un environnement virtuel (optionnel mais recommandé)
+   - macOS / Linux:
+     python -m venv .venv
+     source .venv/bin/activate
    - Windows (PowerShell):
-     - python -m venv .venv
-     - .\.venv\Scripts\Activate.ps1
+     python -m venv .venv
+     .\.venv\Scripts\Activate.ps1
 
-2) Installer les dépendances :
-   - pip install -r requirements.txt
+2. Installez les dépendances :
+   pip install -r requirements.txt
 
-3. Configuration (clé API)
-- Créez un fichier `.env` à la racine contenant au minimum :
-  OPENAI_API_KEY=sk_...
-- Le projet utilise python-dotenv si vous souhaitez charger automatiquement `.env`.
+Configuration
+- Créez un fichier `.env` à la racine (ou exportez les variables).
+- Variables requises (format .env) :
+  GROQ_API_KEY="votre_groq_api_key"
+  APIFY_API_TOKEN="votre_apify_api_token"
+  APIFY_ZALANDO_ACTOR_ID="votre_apify_zalando_actor_id"
 
-4. Exécution — démonstrateur minimal (exemple)
-- Le dépôt contient le prompt système dans :
-  `multi_agents/prompts/event_analyzer_system.txt`
+  Exemple (fichier .env) :
+  GROQ_API_KEY="sk_xxx"
+  APIFY_API_TOKEN="api_xxx"
+  APIFY_ZALANDO_ACTOR_ID="actor_xxx"
 
-- Exemple rapide (fonctionnera sans code supplémentaire du dépôt) :
-  1) Sauvegardez votre description d'événement dans une variable shell, puis exécutez ce court script Python qui lit le prompt et appelle l'API OpenAI (nécessite `openai` installé et OPENAI_API_KEY défini) :
+  Note : adaptez les noms/valeurs si vous utilisez d'autres services ou noms d'environnement.
 
-  ```bash
-  # Exemple (bash)
-  export OPENAI_API_KEY="votre_cle"
-  python - <<'PY'
-  import os, openai, json
-  # ...existing code...
-  prompt = open("multi_agents/prompts/event_analyzer_system.txt", "r", encoding="utf-8").read()
-  user_description = "Soirée d'entreprise informelle en intérieur, budget 80. Femme, soirée en début de soirée."
-  full = prompt + "\n\nUtilisateur: " + user_description + "\n\nRéponds:"
-  openai.api_key = os.getenv("OPENAI_API_KEY")
-  resp = openai.ChatCompletion.create(model="gpt-4o-mini", messages=[{"role":"system","content":prompt},{"role":"user","content":user_description}], max_tokens=400)
-  # Affiche le texte brut renvoyé par le modèle
-  print(resp["choices"][0]["message"]["content"])
-  PY
-  ```
+Où sont les prompts ?
+- Les prompts systèmes se trouve dans :
+  multi_agents/prompts/
 
-  - Adaptez le modèle (`gpt-4o-mini`) en fonction de votre accès.
+Exemple d'exécution:
+```streamlit run streamlit_app.py
+```
 
-5. Tests
-- Si des tests existent, exécutez :
-  - pytest -q
-- Installation pytest (si nécessaire) :
-  - pip install pytest
-
-6. Structure recommandée (ce que j'ai créé)
-- multi_agents/
-  - prompts/
-    - event_analyzer_system.txt   # prompt système (présent)
-  - (code d'API / CLI / modules)  # à implémenter ou à consulter si déjà présent
-- requirements.txt
-- README.md
-
-7. Conseils d'usage et bonnes pratiques
-- Toujours valider la sortie JSON du LLM (parser strict) avant intégration.
-- Ne jamais exposer la clé API dans le dépôt.
-- Pour automatiser localement, créez un petit module `multi_agents/cli.py` qui :
-  - lit une description d'événement,
-  - lit le prompt système,
-  - appelle l'API LLM,
-  - valide et normalise le JSON de sortie.
-
-Dépannage rapide
-- ModuleNotFoundError: vérifiez l'activation du venv et l'installation des dépendances.
-- "401 Unauthorized" de l'API: vérifiez `OPENAI_API_KEY`.
-- Réponse non-JSON: forcez le modèle à répondre strictement en JSON (le prompt système le demande déjà).
-
-Fin.
+Licence / Notes
+- Ce dépôt contient un exemple et des prompts ; adaptez la logique selon votre usage.
